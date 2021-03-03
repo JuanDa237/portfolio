@@ -1,10 +1,29 @@
 @import 'styles/variables.scss';
 
 #sidenav {
+	display: flex;
+	flex-direction: column;
 	height: 100%;
+	flex-wrap: nowrap;
 	background-color: $neutral;
+	.btn-float {
+		position: fixed;
+		transform: translateX($sidenav-base-width + 20px);
+		top: 5px;
+		margin: 0;
+		padding: 0;
+		width: 60px;
+		height: 60px;
+		background-color: transparent;
+		text-align: center;
+		cursor: pointer;
+		i {
+			color: black;
+			margin-top: 1.4rem;
+		}
+	}
 	.author {
-		margin-top: 3rem;
+		text-align: center;
 		img {
 			width: 150px;
 			height: 150px;
@@ -12,17 +31,26 @@
 		}
 	}
 	.nav {
+		flex-direction: column;
+		text-align: center;
 		ul {
 			width: 100%;
 			list-style: none;
-			padding: 0;
-			margin: 0;
 			li {
 				text-transform: uppercase;
 				.active {
 					color: $primary;
 				}
 			}
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	#sidenav {
+		.btn-float {
+			display: none;
+			cursor: none;
 		}
 	}
 }

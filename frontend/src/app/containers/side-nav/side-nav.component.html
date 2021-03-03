@@ -1,21 +1,26 @@
-<nav class="sidenav accordion" id="sidenav">
-	<div class="sidenav-menu text-center">
-		<div class="author mb-2">
-			<img class="" src="assets/images/author.jpeg" alt="Author Image" />
-			<h1>Juan David Gaviria</h1>
-			<span>Fullstack Developer in Colombia</span>
-		</div>
-		<div class="nav">
-			<ul>
-				<li class="active">Home</li>
-				<li>About</li>
-				<li>Services</li>
-				<li>Skills</li>
-				<li>Education</li>
-				<li>Experience</li>
-				<li>Work</li>
-				<li>Contact</li>
-			</ul>
+<nav id="sidenav">
+	<div class="row mt-5">
+		<a class="btn btn-float" (click)="toggleSideNav()">
+			<i class="fa fa-bars" title="Deploy Or Close"></i>
+		</a>
+		<div class="col">
+			<div class="author mb-2 text-center">
+				<img src="assets/images/author.jpeg" alt="Author Image" />
+				<h1>Juan David Gaviria</h1>
+				<span>Fullstack Developer in Colombia</span>
+			</div>
+			<div class="nav text-center">
+				<ul class="m-0 p-0">
+					<li class="active">Home</li>
+					<li>About</li>
+					<li>Services</li>
+					<li>Skills</li>
+					<li>Education</li>
+					<li>Experience</li>
+					<li>Work</li>
+					<li>Contact</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </nav>

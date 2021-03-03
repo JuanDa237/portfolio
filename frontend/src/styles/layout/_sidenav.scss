@@ -47,11 +47,12 @@
 // Responsive styling for the sidenav layout on larger screens
 @include media-breakpoint-up(md) {
 	#layoutSidenav {
+		// If you want to toggle the sidenav in breakpoint
 		#layoutSidenav_nav {
-			transform: translateX(0);
+			transform: translateX(0); // -$sidenav-base-width
 		}
 		#layoutSidenav_content {
-			margin-left: 0;
+			margin-left: 0; // padding 0 too
 		}
 	}
 	.sidenav-toggled {
