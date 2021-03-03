@@ -1,5 +1,8 @@
 {
 	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"cli": {
+		"analytics": "a5630ed0-60dc-4f14-99d7-1e1a72e8f48d"
+	},
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
@@ -7,7 +10,8 @@
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
-					"style": "scss"
+					"style": "scss",
+					"skipTests": true
 				},
 				"@schematics/angular:application": {
 					"strict": true
@@ -27,7 +31,7 @@
 						"tsConfig": "tsconfig.app.json",
 						"aot": true,
 						"assets": ["src/favicon.ico", "src/assets"],
-						"styles": ["src/styles.scss"],
+						"styles": ["src/styles/styles.scss"],
 						"scripts": []
 					},
 					"configurations": {
