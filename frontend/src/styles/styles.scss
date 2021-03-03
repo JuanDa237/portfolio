@@ -1,6 +1,12 @@
-// Import Bootstrap
-@import '~bootstrap/dist/css/bootstrap.min.css';
+// Custom Variables
+@import 'variables';
 
-* {
-	font-family: 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700';
-}
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Font Awesome Icons
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+// My Styles
+@import 'global';
+@import 'layout/sidenav';
