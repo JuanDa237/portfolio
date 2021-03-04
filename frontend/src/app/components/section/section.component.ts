@@ -13,11 +13,11 @@ export class SectionComponent {
 	public title: string;
 
 	@Input()
-	public dataSection: string;
+	public id: string;
 
 	constructor() {
 		this.heading = '';
 		this.title = '';
-		this.dataSection = '';
+		this.id = '';
 	}
 }
