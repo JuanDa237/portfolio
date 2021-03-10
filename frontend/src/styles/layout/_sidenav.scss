@@ -45,7 +45,7 @@
 }
 
 // Responsive styling for the sidenav layout on larger screens
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
 	#layoutSidenav {
 		// If you want to toggle the sidenav in breakpoint
 		#layoutSidenav_nav {

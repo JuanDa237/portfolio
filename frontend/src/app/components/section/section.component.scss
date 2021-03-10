@@ -25,7 +25,7 @@ $heading-color: #999;
 	margin-bottom: 4rem;
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
 	.section {
 		padding: 4rem;
 	}
