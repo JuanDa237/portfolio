@@ -1,0 +1,15 @@
+<div class="progress-wrap">
+	<h3>{{ title }}</h3>
+	<div class="progress">
+		<div
+			[ngClass]="['progress-bar', 'color-' + color]"
+			role="progressbar"
+			[attr.aria-valuenow]="percent"
+			aria-valuemin="0"
+			aria-valuemax="100"
+			[ngStyle]="{ 'width.%': percent }"
+		>
+			<span>{{ percent }}%</span>
+		</div>
+	</div>
+</div>

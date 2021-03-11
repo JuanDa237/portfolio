@@ -1,0 +1,94 @@
+@import 'styles/variables.scss';
+
+.progress-wrap {
+	margin-bottom: 1rem;
+	h3 {
+		font-size: 16px;
+		margin-bottom: 1rem;
+		text-transform: capitalize;
+	}
+	.progress {
+		height: 6px;
+		overflow: visible;
+		.progress-bar {
+			position: relative;
+			font-size: 12px;
+			line-height: 1.2;
+			text-align: right;
+			border-radius: 8px;
+			overflow: visible;
+			span {
+				position: absolute;
+				top: -22px;
+				right: 0;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				top: -2px;
+				right: 0;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+// Colors
+.progress-bar {
+	&.color-1 {
+		background-color: $blue-400;
+		span {
+			color: $blue-400;
+		}
+		&::after {
+			background-color: $blue-400;
+		}
+	}
+	&.color-2 {
+		background-color: $yellow-400;
+		span {
+			color: $yellow-400;
+		}
+		&::after {
+			background-color: $yellow-400;
+		}
+	}
+	&.color-3 {
+		background-color: $red-500;
+		span {
+			color: $red-500;
+		}
+		&::after {
+			background-color: $red-500;
+		}
+	}
+	&.color-4 {
+		background-color: $indigo-400;
+		span {
+			color: $indigo-400;
+		}
+		&::after {
+			background-color: $indigo-400;
+		}
+	}
+	&.color-5 {
+		background-color: $orange-300;
+		span {
+			color: $orange-300;
+		}
+		&::after {
+			background-color: $orange-300;
+		}
+	}
+	&.color-6 {
+		background-color: $blue-700;
+		span {
+			color: $blue-700;
+		}
+		&::after {
+			background-color: $blue-700;
+		}
+	}
+}
