@@ -1,6 +1,6 @@
-<div [class]="'services ' + colorClass">
+<div [ngClass]="['services', colorClass]">
 	<span class="icon">
-		<i [class]="'fas ' + iconClass"></i>
+		<i [ngClass]="['fas', iconClass]"></i>
 	</span>
 	<h3>{{ title }}</h3>
 </div>
