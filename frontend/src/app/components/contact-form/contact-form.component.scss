@@ -1,0 +1,20 @@
+@import 'styles/variables.scss';
+
+#message {
+	height: 130px;
+}
+
+.form-group,
+.form-floating {
+	.form-control {
+		background-color: $neutral;
+		border-radius: 0;
+		&:focus,
+		&.is-invalid:focus {
+			box-shadow: none;
+		}
+	}
+	span {
+		color: $danger;
+	}
+}

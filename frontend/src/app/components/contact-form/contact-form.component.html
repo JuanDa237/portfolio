@@ -1,0 +1,100 @@
+<form [id]="idForm" [formGroup]="contactForm" (ngSubmit)="submitEvent()" novalidate>
+	<div class="form-group form-floating mb-3">
+		<input
+			tabindex="1"
+			type="text"
+			id="name"
+			class="form-control"
+			placeholder="Nombre"
+			name="name"
+			formControlName="name"
+			[class.is-invalid]="name?.invalid && name?.touched"
+		/>
+		<label for="name">Nombre <span>*</span></label>
+		<div class="invalid-feedback" *ngIf="name && name.invalid && name.touched">
+			<ng-container *ngIf="name && name.errors?.required">
+				El nombre es obligatorio.
+			</ng-container>
+			<ng-container *ngIf="name.errors?.minlength">
+				{{ name.errors?.minlength.actualLength }} caracteres de
+				{{ name.errors?.minlength.requiredLength }} requeridos.
+			</ng-container>
+			<ng-container *ngIf="name.errors?.maxlength">
+				El maximo de caracteres permitidos son
+				{{ name.errors?.maxlength.requiredLength }}
+			</ng-container>
+		</div>
+	</div>
+	<div class="form-group form-floating mb-3">
+		<input
+			tabindex="2"
+			type="text"
+			id="email"
+			class="form-control"
+			placeholder="Email"
+			name="email"
+			formControlName="email"
+			[class.is-invalid]="email?.touched && email?.invalid"
+		/>
+		<label for="email">Email <span>*</span></label>
+		<div class="invalid-feedback" *ngIf="email && email.touched && email.invalid">
+			<ng-container *ngIf="email && email.errors?.required">
+				El email es obligatorio.
+			</ng-container>
+			<ng-container *ngIf="email.errors?.email">
+				El email no tiene un formato valido.
+			</ng-container>
+		</div>
+	</div>
+	<div class="form-group form-floating mb-3">
+		<input
+			tabindex="3"
+			type="text"
+			id="subject"
+			class="form-control"
+			placeholder="Asunto"
+			name="subject"
+			formControlName="subject"
+			[class.is-invalid]="subject?.touched && subject?.invalid"
+		/>
+		<label for="subject">Asunto <span>*</span></label>
+		<div class="invalid-feedback" *ngIf="subject && subject.touched && subject.invalid">
+			<ng-container *ngIf="subject && subject.errors?.required">
+				El asunto es obligatorio.
+			</ng-container>
+			<ng-container *ngIf="subject.errors?.minlength">
+				{{ subject.errors?.minlength.actualLength }} caracteres de
+				{{ subject.errors?.minlength.requiredLength }} requeridos.
+			</ng-container>
+			<ng-container *ngIf="subject.errors?.maxlength">
+				El maximo de caracteres permitidos son
+				{{ subject.errors?.maxlength.requiredLength }}
+			</ng-container>
+		</div>
+	</div>
+	<div class="form-group form-floating mb-3">
+		<textarea
+			tabindex="4"
+			name="message"
+			id="message"
+			placeholder="Mensaje"
+			class="form-control"
+			formControlName="message"
+			[class.is-invalid]="message?.touched && message?.invalid"
+		></textarea>
+		<label for="message">Mensaje <span>*</span></label>
+		<div class="invalid-feedback" *ngIf="message && message.touched && message.invalid">
+			<ng-container *ngIf="message && message.errors?.required">
+				El mensaje es obligatorio.
+			</ng-container>
+			<ng-container *ngIf="message.errors?.minlength">
+				{{ message.errors?.minlength.actualLength }} caracteres de
+				{{ message.errors?.minlength.requiredLength }} requeridos.
+			</ng-container>
+			<ng-container *ngIf="message.errors?.maxlength">
+				El maximo de caracteres permitidos son
+				{{ message.errors?.maxlength.requiredLength }}
+			</ng-container>
+		</div>
+	</div>
+</form>

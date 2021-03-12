@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -9,7 +10,7 @@ import { sections } from './sections';
 import { services } from './services';
 
 @NgModule({
-	imports: [BrowserModule],
+	imports: [BrowserModule, ReactiveFormsModule],
 	declarations: [AppComponent, containers, components, sections],
 	providers: [services],
 	bootstrap: [AppComponent]

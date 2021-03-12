@@ -1,0 +1,41 @@
+@import 'styles/variables.scss';
+
+$size-box: 100px;
+
+.info {
+	position: relative;
+	width: 100%;
+	height: $size-box;
+	float: left;
+	margin-bottom: 1.5rem;
+	.icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: table;
+		width: $size-box;
+		height: $size-box;
+		background-color: $neutral;
+		border-radius: 2px;
+		text-align: center;
+		i {
+			display: table-cell;
+			vertical-align: middle;
+			height: $size-box;
+			color: $primary;
+			font-size: 40px;
+		}
+	}
+	.text {
+		width: 100%;
+		padding-left: $size-box + 15px;
+		text-align: left;
+		&.m-line-1 {
+			margin-top: 2.2rem;
+		}
+		&.m-line-2 {
+			margin-top: 2rem;
+			line-height: 0.7;
+		}
+	}
+}
