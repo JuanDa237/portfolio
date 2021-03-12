@@ -28,14 +28,9 @@ $size-box: 100px;
 	}
 	.text {
 		width: 100%;
+		margin-top: 2.2rem;
 		padding-left: $size-box + 15px;
 		text-align: left;
-		&.m-line-1 {
-			margin-top: 2.2rem;
-		}
-		&.m-line-2 {
-			margin-top: 2rem;
-			line-height: 0.7;
-		}
+		word-wrap: break-word;
 	}
 }

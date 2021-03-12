@@ -6,6 +6,7 @@
 	height: 100%;
 	flex-wrap: nowrap;
 	background-color: $neutral;
+	overflow-y: auto;
 	.btn-float {
 		position: fixed;
 		transform: translateX($sidenav-base-width + 20px);
