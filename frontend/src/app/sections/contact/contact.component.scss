@@ -34,3 +34,24 @@ $size-box: 100px;
 		word-wrap: break-word;
 	}
 }
+
+.btn-send {
+	background-color: $primary;
+	color: white;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.loading {
+	width: 150px;
+	height: 150px;
+	margin: 3rem;
+}
+
+@include media-breakpoint-up(lg) {
+	.loading {
+		width: 200px;
+		height: 200px;
+	}
+}

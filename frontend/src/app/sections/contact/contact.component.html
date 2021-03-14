@@ -29,9 +29,32 @@
 		<div class="col-lg-7">
 			<div class="row">
 				<div class="container">
-					<app-contact-form></app-contact-form>
+					<ng-container *ngIf="!loading; then form; else loadingForm"></ng-container>
 				</div>
 			</div>
 		</div>
 	</div>
 </app-section>
+<ng-template #form>
+	<ng-container *ngIf="sentEmail; then message"></ng-container>
+	<app-contact-form
+		idForm="contactMe"
+		(onSubmitEvent)="sendEmail()"
+		(invalidForm)="invalidForm = $event"
+	></app-contact-form>
+	<button type="submit" class="btn btn-send" [disabled]="invalidForm" form="contactMe">
+		send message
+	</button>
+</ng-template>
+<ng-template #loadingForm>
+	<div class="d-flex justify-content-center">
+		<div class="spinner-border text-primary loading" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+	</div>
+</ng-template>
+<ng-template #message>
+	<div class="alert" [ngClass]="{ 'alert-danger': error, 'alert-success': !error }" role="alert">
+		{{ error ? "The message couldn't be sent." : 'Message sent succesfully.' }}
+	</div>
+</ng-template>

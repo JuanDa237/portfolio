@@ -1,12 +1,13 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Email } from 'src/app/models';
 
 @Component({
 	selector: 'app-contact-form',
 	templateUrl: './contact-form.component.html',
 	styleUrls: ['./contact-form.component.scss']
 })
-export class ContactFormComponent {
+export class ContactFormComponent implements OnInit {
 	public contactForm: FormGroup;
 
 	@Input()
@@ -43,8 +44,27 @@ export class ContactFormComponent {
 		this.invalidForm = new EventEmitter<boolean>();
 	}
 
+	ngOnInit(): void {
+		this.contactForm.valueChanges.subscribe(() => {
+			this.invalidForm.emit(this.contactForm.invalid);
+		});
+	}
+
 	public submitEvent(): void {
 		if (this.contactForm.valid) this.onSubmitEvent.emit(null);
+	}
+
+	public getEmailValues(): Email {
+		return this.contactForm.value as Email;
+	}
+
+	public setEmailValues(email: Email): void {
+		this.contactForm.patchValue({
+			name: email.name,
+			email: email.email,
+			subject: email.subject,
+			message: email.message
+		});
 	}
 
 	// Form
