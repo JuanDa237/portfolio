@@ -10,20 +10,8 @@
 			formControlName="name"
 			[class.is-invalid]="name?.invalid && name?.touched"
 		/>
-		<label for="name">Name <span>*</span></label>
-		<div class="invalid-feedback" *ngIf="name && name.invalid && name.touched">
-			<ng-container *ngIf="name && name.errors?.required">
-				The name is required.
-			</ng-container>
-			<ng-container *ngIf="name.errors?.minlength">
-				{{ name.errors?.minlength.actualLength }} of
-				{{ name.errors?.minlength.requiredLength }} characters required.
-			</ng-container>
-			<ng-container *ngIf="name.errors?.maxlength">
-				The maximum characters allowed are
-				{{ name.errors?.maxlength.requiredLength }}
-			</ng-container>
-		</div>
+		<label for="name">{{ 'contact.f.n' | translate }} <span>*</span></label>
+		<ng-container *ngIf="name?.invalid && name?.touched; then nameError"></ng-container>
 	</div>
 	<div class="form-group form-floating mb-3">
 		<input
@@ -36,15 +24,8 @@
 			formControlName="email"
 			[class.is-invalid]="email?.touched && email?.invalid"
 		/>
-		<label for="email">Email <span>*</span></label>
-		<div class="invalid-feedback" *ngIf="email && email.touched && email.invalid">
-			<ng-container *ngIf="email && email.errors?.required">
-				The email is required.
-			</ng-container>
-			<ng-container *ngIf="email.errors?.email">
-				The email isn't in a valid format.
-			</ng-container>
-		</div>
+		<label for="email">{{ 'contact.f.e' | translate }} <span>*</span></label>
+		<ng-container *ngIf="email?.touched && email?.invalid; then emailError"></ng-container>
 	</div>
 	<div class="form-group form-floating mb-3">
 		<input
@@ -57,20 +38,8 @@
 			formControlName="subject"
 			[class.is-invalid]="subject?.touched && subject?.invalid"
 		/>
-		<label for="subject">Subject <span>*</span></label>
-		<div class="invalid-feedback" *ngIf="subject && subject.touched && subject.invalid">
-			<ng-container *ngIf="subject && subject.errors?.required">
-				The subject is required.
-			</ng-container>
-			<ng-container *ngIf="subject.errors?.minlength">
-				{{ subject.errors?.minlength.actualLength }} of
-				{{ subject.errors?.minlength.requiredLength }} characters required.
-			</ng-container>
-			<ng-container *ngIf="subject.errors?.maxlength">
-				The maximum characters allowed are
-				{{ subject.errors?.maxlength.requiredLength }}
-			</ng-container>
-		</div>
+		<label for="subject">{{ 'contact.f.s' | translate }} <span>*</span></label>
+		<div *ngIf="subject?.touched && subject?.invalid; then subjectError"></div>
 	</div>
 	<div class="form-group form-floating mb-3">
 		<textarea
@@ -82,19 +51,54 @@
 			formControlName="message"
 			[class.is-invalid]="message?.touched && message?.invalid"
 		></textarea>
-		<label for="message">Message <span>*</span></label>
-		<div class="invalid-feedback" *ngIf="message && message.touched && message.invalid">
-			<ng-container *ngIf="message && message.errors?.required">
-				The message is required.
-			</ng-container>
-			<ng-container *ngIf="message.errors?.minlength">
-				{{ message.errors?.minlength.actualLength }} of
-				{{ message.errors?.minlength.requiredLength }} characters required.
-			</ng-container>
-			<ng-container *ngIf="message.errors?.maxlength">
-				The maximum characters allowed are
-				{{ message.errors?.maxlength.requiredLength }}
-			</ng-container>
-		</div>
+		<label for="message">{{ 'contact.f.m' | translate }} <span>*</span></label>
+		<div *ngIf="message?.touched && message?.invalid; then messageError"></div>
 	</div>
 </form>
+<ng-template #nameError>
+	<div class="invalid-feedback">
+		<span *ngIf="name?.errors?.required">{{ 'contact.err.n.r' | translate }}</span>
+		<span *ngIf="name?.errors?.minlength">
+			{{ name?.errors?.minlength.actualLength }} {{ 'contact.err.gen.chars.of' | translate }}
+			{{ name?.errors?.minlength.requiredLength }}
+			{{ 'contact.err.gen.chars.chars' | translate }}
+		</span>
+		<span *ngIf="name?.errors?.maxlength">
+			{{ 'contact.err.gen.max' | translate }} {{ name?.errors?.maxlength.requiredLength }}
+		</span>
+	</div>
+</ng-template>
+<ng-template #emailError>
+	<div class="invalid-feedback">
+		<span *ngIf="email?.errors?.required">{{ 'contact.err.e.r' | translate }}</span>
+		<span *ngIf="email?.errors?.email">{{ 'contact.err.e.f' | translate }}</span>
+	</div>
+</ng-template>
+<ng-template #subjectError>
+	<div class="invalid-feedback">
+		<span *ngIf="subject?.errors?.required">{{ 'contact.err.s.r' | translate }}</span>
+		<span *ngIf="subject?.errors?.minlength">
+			{{ subject?.errors?.minlength.actualLength }}
+			{{ 'contact.err.gen.chars.of' | translate }}
+			{{ subject?.errors?.minlength.requiredLength }}
+			{{ 'contact.err.gen.chars.chars' | translate }}
+		</span>
+		<span *ngIf="subject?.errors?.maxlength">
+			{{ 'contact.err.gen.max' | translate }} {{ subject?.errors?.maxlength.requiredLength }}
+		</span>
+	</div>
+</ng-template>
+<ng-template #messageError>
+	<div class="invalid-feedback">
+		<span *ngIf="message?.errors?.required">{{ 'contact.err.m.r' | translate }}</span>
+		<span *ngIf="message?.errors?.minlength">
+			{{ message?.errors?.minlength.actualLength }}
+			{{ 'contact.err.gen.chars.of' | translate }}
+			{{ message?.errors?.minlength.requiredLength }}
+			{{ 'contact.err.gen.chars.chars' | translate }}
+		</span>
+		<span *ngIf="message?.errors?.maxlength">
+			{{ 'contact.err.gen.max' | translate }} {{ message?.errors?.maxlength.requiredLength }}
+		</span>
+	</div>
+</ng-template>

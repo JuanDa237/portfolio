@@ -1,4 +1,8 @@
-<app-section heading="education" title="education" id="education">
+<app-section
+	[heading]="'education.h' | translate"
+	[title]="'education.t' | translate"
+	id="education"
+>
 	<div class="row">
 		<div class="col">
 			<div class="accordion" id="educationAccordion">
@@ -12,7 +16,7 @@
 							aria-expanded="true"
 							aria-controls="collapseOne"
 						>
-							systems engineer student
+							{{ 'education.ed.1.t' | translate }}
 						</button>
 					</h2>
 					<div
@@ -23,9 +27,7 @@
 					>
 						<div class="accordion-body">
 							<p>
-								Currently I'm studying Software Development and eventually Systems
-								Engineering at the Metropolitan Institute of Medellin (ITM), I'm
-								part of a research seedbed named TAI where I develop a web page.
+								{{ 'education.ed.1.p' | translate }}
 							</p>
 						</div>
 					</div>
@@ -40,7 +42,7 @@
 							aria-expanded="false"
 							aria-controls="collapseTwo"
 						>
-							high school
+							{{ 'education.ed.2.t' | translate }}
 						</button>
 					</h2>
 					<div
@@ -51,8 +53,7 @@
 					>
 						<div class="accordion-body">
 							<p>
-								The school where I graduated is called Centro Educativo Autonomo
-								(CEA), I was in my last grade in 2019 and finally graduated.
+								{{ 'education.ed.2.p' | translate }}
 							</p>
 						</div>
 					</div>

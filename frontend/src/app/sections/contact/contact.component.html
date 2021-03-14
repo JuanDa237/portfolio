@@ -1,4 +1,4 @@
-<app-section heading="get in touch" title="contact" id="contact">
+<app-section [heading]="'contact.h' | translate" [title]="'contact.t' | translate" id="contact">
 	<div class="row">
 		<div class="col-lg-5">
 			<div class="info">
@@ -14,7 +14,7 @@
 					<i class="far fa-map"></i>
 				</div>
 				<div class="text">
-					<p>Street 105 #64 e 41 - Medellin, Colombia.</p>
+					<p>{{ 'contact.info.a' | translate }}</p>
 				</div>
 			</div>
 			<div class="info">
@@ -43,7 +43,7 @@
 		(invalidForm)="invalidForm = $event"
 	></app-contact-form>
 	<button type="submit" class="btn btn-send" [disabled]="invalidForm" form="contactMe">
-		send message
+		{{ 'contact.mes.send' | translate }}
 	</button>
 </ng-template>
 <ng-template #loadingForm>
@@ -55,6 +55,6 @@
 </ng-template>
 <ng-template #message>
 	<div class="alert" [ngClass]="{ 'alert-danger': error, 'alert-success': !error }" role="alert">
-		{{ error ? "The message couldn't be sent." : 'Message sent succesfully.' }}
+		{{ error ? ('contact.mes.error' | translate) : ('contact.mes.sent' | translate) }}
 	</div>
 </ng-template>

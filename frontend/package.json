@@ -22,6 +22,8 @@
 		"@fortawesome/angular-fontawesome": "^0.8.2",
 		"@fortawesome/fontawesome-free": "^5.15.2",
 		"@fortawesome/fontawesome-svg-core": "^1.2.34",
+		"@ngx-translate/core": "^13.0.0",
+		"@ngx-translate/http-loader": "^6.0.0",
 		"bootstrap": "^5.0.0-beta2",
 		"rxjs": "~6.6.0",
 		"tslib": "^2.0.0",

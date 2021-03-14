@@ -1,0 +1,107 @@
+{
+	"sidenav": {
+		"info": {
+			"stack": "Fullstack Developer",
+			"in": "in Colombia"
+		},
+		"nav": {
+			"home": "home",
+			"about": "about",
+			"skills": "skills",
+			"education": "education",
+			"experience": "experience",
+			"work": "work",
+			"contact": "contact"
+		}
+	},
+	"about": {
+		"h": "about me",
+		"t": "who am i?",
+		"p1": "I'm a patient, kind person and I like team work. At the moment I'm looking for a job as a web page developer, I'm currently studying Systems Engineering at the Metropolitan Technological Institute of Medellin (ITM).",
+		"p2": "In addition, I'm a perfectionist with a taste for constant updating and continuous learning, I love to investigate and learn on my own.",
+		"abilities": {
+			"1": "Frontend",
+			"2": "Backend",
+			"3": "Software",
+			"4": "Desktop apps"
+		}
+	},
+	"skills": {
+		"h": "my specialty",
+		"t": "my skills",
+		"a": {
+			"t": "angular",
+			"p": "I love developing web pages with the angular framework, it's very agile and versatile. I've the ability to create responsive web designs and I usually use scss for the styles."
+		},
+		"n": {
+			"t": "node js",
+			"p": "I love creating the server of my applications with Node, I also use it in conjunction with Express, Multer, JWT, among others. To be able to create more complex applications such as file uploading and authentication."
+		},
+		"e": {
+			"t": "express",
+			"p": "The Express framework helps me create my backend easily and quickly, I like to develop my Express backend using TypeScript, but I also have the ability to do it with JavaScript."
+		},
+		"db": {
+			"t": "database",
+			"p": "For my applications I usually use MySql or MongoDB, I've the ability to use them in conjunction with Node and Express to make the data last over time."
+		},
+		"p": "The aforementioned technologies are my main tools to develop web pages and I have several projects where I use them, In addition I use the following technologies to carry out my projects:",
+		"tec": {
+			"e": "Electron / Desktop development."
+		}
+	},
+	"education": {
+		"h": "education",
+		"t": "education",
+		"ed": {
+			"1": {
+				"t": "systems engineer student",
+				"p": "Currently I'm studying Software Development and eventually Systems Engineering at the Metropolitan Institute of Medellin (ITM), I'm part of a research seedbed named TAI where I develop a web page."
+			},
+			"2": {
+				"t": "high school",
+				"p": "The school where I graduated is called Centro Educativo Autonomo (CEA), I was in my last grade in 2019 and finally graduated."
+			}
+		}
+	},
+	"contact": {
+		"h": "get in touch",
+		"t": "contact",
+		"info": {
+			"a": "Street 105 #64 e 41 - Medellin, Colombia."
+		},
+		"f": {
+			"n": "Name",
+			"e": "Email",
+			"s": "Subject",
+			"m": "Message"
+		},
+		"err": {
+			"n": {
+				"r": "The name is required"
+			},
+			"e": {
+				"r": "The email is required",
+				"f": "The email isn't in a valid format"
+			},
+			"s": {
+				"r": "The subject is required"
+			},
+			"m": {
+				"r": "The maximum characters allowed are"
+			},
+			"gen": {
+				"chars": {
+					"of": "of",
+					"chars": "characters required"
+				},
+				"max": "The maximum characters allowed are"
+			}
+		},
+		"mes": {
+			"send": "send message",
+			"err": "The message couldn't be sent",
+			"sent": "Message sent succesfully"
+		}
+	}
+}

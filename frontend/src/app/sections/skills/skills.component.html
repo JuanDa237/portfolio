@@ -1,32 +1,41 @@
-<app-section heading="my specialty" title="my skills" id="skills">
+<app-section [heading]="'skills.h' | translate" [title]="'skills.t' | translate" id="skills">
 	<div class="row">
 		<div class="col-12">
 			<div class="row text-center">
 				<div class="col-md-6 col-xl-3 mb-5 mt-3">
-					<app-services-two title="angular" icon="fab fa-angular" colorClass="color-1">
-						I love developing web pages with the angular framework, it's very agile and
-						versatile. I've the ability to create responsive web designs and I usually
-						use scss for the styles.
+					<app-services-two
+						[title]="'skills.a.t' | translate"
+						icon="fab fa-angular"
+						colorClass="color-1"
+					>
+						{{ 'skills.a.p' | translate }}
 					</app-services-two>
 				</div>
 				<div class="col-md-6 col-xl-3 mb-5 mt-3">
-					<app-services-two title="node js" icon="fab fa-node-js" colorClass="color-2">
-						I love creating the server of my applications with Node, I also use it in
-						conjunction with Express, Multer, JWT, among others. To be able to create
-						more complex applications such as file uploading and authentication.
+					<app-services-two
+						[title]="'skills.n.t' | translate"
+						icon="fab fa-node-js"
+						colorClass="color-2"
+					>
+						{{ 'skills.n.p' | translate }}
 					</app-services-two>
 				</div>
 				<div class="col-md-6 col-xl-3 mb-5 mt-3">
-					<app-services-two title="express" icon="fab fa-etsy" colorClass="color-3">
-						The Express framework helps me create my backend easily and quickly, I like
-						to develop my Express backend using TypeScript, but I also have the ability
-						to do it with JavaScript.
+					<app-services-two
+						[title]="'skills.e.t' | translate"
+						icon="fab fa-etsy"
+						colorClass="color-3"
+					>
+						{{ 'skills.e.p' | translate }}
 					</app-services-two>
 				</div>
 				<div class="col-md-6 col-xl-3 mb-5 mt-3">
-					<app-services-two title="database" icon="fas fa-database" colorClass="color-4">
-						For my applications I usually use MySql or MongoDB, I've the ability to use
-						them in conjunction with Node and Express to make the data last over time.
+					<app-services-two
+						[title]="'skills.db.t' | translate"
+						icon="fas fa-database"
+						colorClass="color-4"
+					>
+						{{ 'skills.db.p' | translate }}
 					</app-services-two>
 				</div>
 			</div>
@@ -35,9 +44,7 @@
 			<div class="row">
 				<div class="col-12 mb-2">
 					<p>
-						The aforementioned technologies are my main tools to develop web pages and I
-						have several projects where I use them, In addition I use the following
-						technologies to carry out my projects:
+						{{ 'skills.p' | translate }}
 					</p>
 				</div>
 				<div class="col-md-6">
@@ -59,7 +66,7 @@
 				</div>
 				<div class="col-md-6">
 					<app-progress-bar
-						title="electron / desktop development"
+						[title]="'skills.tec.e' | translate"
 						color="4"
 						[percent]="55"
 					></app-progress-bar>

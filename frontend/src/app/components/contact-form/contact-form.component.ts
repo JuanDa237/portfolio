@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 import { Email } from 'src/app/models';
 
 @Component({
@@ -19,7 +20,7 @@ export class ContactFormComponent implements OnInit {
 	@Output()
 	private invalidForm: EventEmitter<boolean>;
 
-	constructor() {
+	constructor(private translateService: TranslateService) {
 		this.contactForm = new FormGroup({
 			name: new FormControl('', [
 				Validators.required,
@@ -42,6 +43,13 @@ export class ContactFormComponent implements OnInit {
 
 		this.onSubmitEvent = new EventEmitter<null>();
 		this.invalidForm = new EventEmitter<boolean>();
+
+		// Translator
+		this.translateService.addLangs(['en', 'es']);
+		this.translateService.setDefaultLang('en');
+
+		const browserLang = this.translateService.getBrowserLang();
+		this.translateService.use(browserLang.match(/en|es/) ? browserLang : 'en');
 	}
 
 	ngOnInit(): void {

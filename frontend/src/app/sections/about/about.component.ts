@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+	selector: 'app-about',
+	templateUrl: './about.component.html',
+	styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
+	constructor(private translateService: TranslateService) {
+		this.translateService.addLangs(['en', 'es']);
+		this.translateService.setDefaultLang('en');
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+		const browserLang = this.translateService.getBrowserLang();
+		this.translateService.use(browserLang.match(/en|es/) ? browserLang : 'en');
+	}
 }
