@@ -10,17 +10,17 @@
 			formControlName="name"
 			[class.is-invalid]="name?.invalid && name?.touched"
 		/>
-		<label for="name">Nombre <span>*</span></label>
+		<label for="name">Name <span>*</span></label>
 		<div class="invalid-feedback" *ngIf="name && name.invalid && name.touched">
 			<ng-container *ngIf="name && name.errors?.required">
-				El nombre es obligatorio.
+				The name is required.
 			</ng-container>
 			<ng-container *ngIf="name.errors?.minlength">
-				{{ name.errors?.minlength.actualLength }} caracteres de
-				{{ name.errors?.minlength.requiredLength }} requeridos.
+				{{ name.errors?.minlength.actualLength }} of
+				{{ name.errors?.minlength.requiredLength }} characters required.
 			</ng-container>
 			<ng-container *ngIf="name.errors?.maxlength">
-				El maximo de caracteres permitidos son
+				The maximum characters allowed are
 				{{ name.errors?.maxlength.requiredLength }}
 			</ng-container>
 		</div>
@@ -39,10 +39,10 @@
 		<label for="email">Email <span>*</span></label>
 		<div class="invalid-feedback" *ngIf="email && email.touched && email.invalid">
 			<ng-container *ngIf="email && email.errors?.required">
-				El email es obligatorio.
+				The email is required.
 			</ng-container>
 			<ng-container *ngIf="email.errors?.email">
-				El email no tiene un formato valido.
+				The email isn't in a valid format.
 			</ng-container>
 		</div>
 	</div>
@@ -57,17 +57,17 @@
 			formControlName="subject"
 			[class.is-invalid]="subject?.touched && subject?.invalid"
 		/>
-		<label for="subject">Asunto <span>*</span></label>
+		<label for="subject">Subject <span>*</span></label>
 		<div class="invalid-feedback" *ngIf="subject && subject.touched && subject.invalid">
 			<ng-container *ngIf="subject && subject.errors?.required">
-				El asunto es obligatorio.
+				The subject is required.
 			</ng-container>
 			<ng-container *ngIf="subject.errors?.minlength">
-				{{ subject.errors?.minlength.actualLength }} caracteres de
-				{{ subject.errors?.minlength.requiredLength }} requeridos.
+				{{ subject.errors?.minlength.actualLength }} of
+				{{ subject.errors?.minlength.requiredLength }} characters required.
 			</ng-container>
 			<ng-container *ngIf="subject.errors?.maxlength">
-				El maximo de caracteres permitidos son
+				The maximum characters allowed are
 				{{ subject.errors?.maxlength.requiredLength }}
 			</ng-container>
 		</div>
@@ -82,17 +82,17 @@
 			formControlName="message"
 			[class.is-invalid]="message?.touched && message?.invalid"
 		></textarea>
-		<label for="message">Mensaje <span>*</span></label>
+		<label for="message">Message <span>*</span></label>
 		<div class="invalid-feedback" *ngIf="message && message.touched && message.invalid">
 			<ng-container *ngIf="message && message.errors?.required">
-				El mensaje es obligatorio.
+				The message is required.
 			</ng-container>
 			<ng-container *ngIf="message.errors?.minlength">
-				{{ message.errors?.minlength.actualLength }} caracteres de
-				{{ message.errors?.minlength.requiredLength }} requeridos.
+				{{ message.errors?.minlength.actualLength }} of
+				{{ message.errors?.minlength.requiredLength }} characters required.
 			</ng-container>
 			<ng-container *ngIf="message.errors?.maxlength">
-				El maximo de caracteres permitidos son
+				The maximum characters allowed are
 				{{ message.errors?.maxlength.requiredLength }}
 			</ng-container>
 		</div>
