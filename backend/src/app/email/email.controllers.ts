@@ -2,28 +2,26 @@ import { Request, Response } from 'express';
 
 import { emailFunctions } from './email.functions';
 
+// Types
+import { EmailInfo } from './models/emails.model';
+
 class EmailControllers {
 	// Send Email
 	public async sendEmail(request: Request, response: Response) {
 		const emailInfo: EmailInfo = request.body;
 
-		const canSend = await emailFunctions.sendMails(emailInfo);
-
+		const sentEmails = await emailFunctions.sendMails(emailInfo);
 		var message: string = '';
-		var status: number = 0;
+		var status: number = 200;
 
-		if (canSend[0]) {
-			message += 'Se envio el email a mi.\n';
-			if (canSend[1]) {
-				message += 'Se envio el mensaje a el.';
-				status = 200;
-			} else if (!canSend[1]) {
-				message += 'No se envio el mensaje a el.';
+		for (const email of sentEmails) {
+			if (email.sent) {
+				message += `The email was sent to ${email.user}.`;
+			} else {
+				message += `The email wasn't sent to ${email.user}.`;
 				status = 500;
 			}
-		} else if (!canSend[0]) {
-			message += 'No se envio el mensaje a mi ni a el.';
-			status = 500;
+			message += '\n';
 		}
 
 		return response.status(status).json({ message });

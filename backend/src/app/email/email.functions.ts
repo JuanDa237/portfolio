@@ -5,23 +5,30 @@ import keys from '../../keys';
 // Types
 import Mail from 'nodemailer/lib/mailer';
 import SMTPTransport from 'nodemailer/lib/smtp-transport';
+import { EmailInfo, StatusEmail } from './models/emails.model';
 
 class EmailFunctions {
-	public async sendMails(emailInfo: EmailInfo): Promise<boolean[]> {
-		var canSendBoth: boolean[] = [];
+	public async sendMails(emailInfo: EmailInfo): Promise<StatusEmail[]> {
+		var sentEmails: StatusEmail[] = [];
 		const myEmail = process.env.EMAIL || keys.noEnv.EMAIL;
 
-		var canSendToMe = await this.sendEmailPromise(this.infoToMe(myEmail, emailInfo));
-		canSendBoth.push(canSendToMe);
+		const sendedToMe = await this.sendEmailPromise(this.infoToMe(myEmail, emailInfo));
+		sentEmails.push({
+			user: 'me',
+			sent: sendedToMe
+		});
 
-		if (canSendToMe) {
-			var canSendToUser = await this.sendEmailPromise(this.infoToUser(myEmail, emailInfo));
-			canSendBoth.push(canSendToUser);
-		} else {
-			canSendBoth.push(false);
+		sentEmails.push({
+			user: emailInfo.name,
+			sent: sendedToMe
+		});
+
+		if (sendedToMe) {
+			const sendedToUser = await this.sendEmailPromise(this.infoToUser(myEmail, emailInfo));
+			sentEmails[1].sent = sendedToUser;
 		}
 
-		return canSendBoth;
+		return sentEmails;
 	}
 
 	private infoToMe(myEmail: string, emailInfo: EmailInfo): Mail.Options {
