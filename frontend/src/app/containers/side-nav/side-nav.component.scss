@@ -1,12 +1,13 @@
 @import 'styles/variables.scss';
 
+$link: #bdbdbd;
+
 #sidenav {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 	flex-wrap: nowrap;
 	background-color: $neutral;
-	overflow-y: auto;
 	.btn-float {
 		position: fixed;
 		transform: translateX($sidenav-base-width + 20px);
@@ -23,6 +24,11 @@
 			margin-top: 1.4rem;
 		}
 	}
+}
+
+.sidenav-main {
+	flex-grow: 1;
+	overflow-y: auto;
 	#author {
 		text-align: center;
 		margin-bottom: 2rem;
@@ -87,6 +93,55 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+.sidenav-footer {
+	padding: 0.75rem;
+	background-color: $footer;
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			display: inline;
+			margin: 0 10px;
+			a {
+				display: inline-block;
+				width: 60px;
+				height: 60px;
+				font-size: 22px;
+				text-align: center;
+				border-radius: 50%;
+				background-color: $link;
+				color: white;
+				i {
+					color: white;
+					margin: 0;
+					line-height: 60px;
+					transition: all 0.8s;
+				}
+				&:hover {
+					i {
+						transform: rotate(360deg);
+						transition: all 0.4s;
+					}
+				}
+			}
+		}
+	}
+}
+
+.sidenav-footer {
+	ul > li > a {
+		&.github:hover {
+			background-color: $github;
+		}
+		&.linkedIn:hover {
+			background-color: $linkedIn;
+		}
+		&.hover {
+			color: white;
 		}
 	}
 }

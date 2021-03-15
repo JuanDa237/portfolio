@@ -2,7 +2,6 @@
 #layoutSidenav {
 	display: flex;
 	#layoutSidenav_nav {
-		@extend .fixed-top;
 		flex-basis: $sidenav-base-width;
 		flex-shrink: 0;
 		transition: transform 0.15s ease-in-out;

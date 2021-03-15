@@ -103,5 +103,8 @@
 			"err": "The message couldn't be sent",
 			"sent": "Message sent succesfully"
 		}
+	},
+	"footer": {
+		"by": "Written and Coded by"
 	}
 }

@@ -103,5 +103,8 @@
 			"err": "El mensaje no se pudo enviar",
 			"sent": "El mensaje se envio satisfactoriamente"
 		}
+	},
+	"footer": {
+		"by": "Escrito y Codificado por"
 	}
 }
