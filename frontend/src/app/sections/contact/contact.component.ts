@@ -45,16 +45,15 @@ export class ContactComponent {
 
 			this.contactMeService.sendEmail(email).subscribe(
 				(resolve) => {
-					this.loading = false;
 					this.sentEmail = true;
+					this.loading = false;
 					this.error = false;
 				},
 				(error) => {
-					this.sentEmail = false;
+					this.sentEmail = true;
 					this.loading = false;
 					this.error = true;
 
-					if (email) this.contactMeForm?.setEmailValues(email);
 					throw new Error(error);
 				}
 			);

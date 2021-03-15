@@ -55,6 +55,6 @@
 </ng-template>
 <ng-template #message>
 	<div class="alert" [ngClass]="{ 'alert-danger': error, 'alert-success': !error }" role="alert">
-		{{ error ? ('contact.mes.error' | translate) : ('contact.mes.sent' | translate) }}
+		{{ (error ? 'contact.mes.err' : 'contact.mes.sent') | translate }}
 	</div>
 </ng-template>
