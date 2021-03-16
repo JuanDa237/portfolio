@@ -64,6 +64,15 @@
 			}
 		}
 	},
+	"experience": {
+		"1": {
+			"t": {
+				"work": "Fullstack Developer at ITM",
+				"time": "2020 - Actually"
+			},
+			"p": "I am developing a website with the MEAN stack."
+		}
+	},
 	"contact": {
 		"h": "get in touch",
 		"t": "contact",

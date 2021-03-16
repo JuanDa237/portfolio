@@ -64,6 +64,15 @@
 			}
 		}
 	},
+	"experience": {
+		"1": {
+			"t": {
+				"work": "Desarrollador Fullstack en el ITM",
+				"time": "2020 - Actualmente"
+			},
+			"p": "Estoy desarrollando una web con el stack MEAN."
+		}
+	},
 	"contact": {
 		"h": "estemos en contacto",
 		"t": "contacto",
