@@ -65,6 +65,8 @@
 		}
 	},
 	"experience": {
+		"h": "experiencia",
+		"t": "experiencia laboral",
 		"1": {
 			"t": {
 				"work": "Desarrollador Fullstack en el ITM",

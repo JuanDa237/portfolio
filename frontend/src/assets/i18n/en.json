@@ -65,6 +65,8 @@
 		}
 	},
 	"experience": {
+		"h": "experience",
+		"t": "work experience",
 		"1": {
 			"t": {
 				"work": "Fullstack Developer at ITM",
