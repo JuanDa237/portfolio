@@ -1,6 +1,16 @@
 <div class="btn-group" role="group">
-	<input type="radio" class="btn-check" name="btnradio" id="btnradio1" />
-	<label class="btn btn-outline-primary" for="btnradio1">English</label>
-	<input type="radio" class="btn-check" name="btnradio" id="btnradio2" />
-	<label class="btn btn-outline-primary" for="btnradio2">Spanish</label>
+	<ng-container *ngFor="let lang of langs">
+		<input
+			type="radio"
+			name="btnradioLang"
+			class="btn-check"
+			[id]="lang + 'Id'"
+			[value]="lang"
+			(change)="onLangChange($event)"
+			[checked]="lang == selectedLang"
+		/>
+		<label class="btn btn-outline-primary" [for]="lang + 'Id'">
+			{{ 'langs.' + lang | translate }}
+		</label>
+	</ng-container>
 </div>

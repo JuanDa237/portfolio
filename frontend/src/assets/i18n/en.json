@@ -106,5 +106,9 @@
 	},
 	"footer": {
 		"by": "Written and Coded by"
+	},
+	"langs": {
+		"en": "English",
+		"es": "Spanish"
 	}
 }

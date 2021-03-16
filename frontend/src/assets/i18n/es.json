@@ -106,5 +106,9 @@
 	},
 	"footer": {
 		"by": "Escrito y Codificado por"
+	},
+	"langs": {
+		"en": "Ingles",
+		"es": "Español"
 	}
 }
