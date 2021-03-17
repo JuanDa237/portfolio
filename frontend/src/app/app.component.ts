@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { NavigationService } from './services/navigation.service';
 
@@ -6,7 +6,7 @@ import { NavigationService } from './services/navigation.service';
 	selector: 'app-root',
 	templateUrl: './app.component.html'
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
 	@HostBinding('class.sidenav-toggled')
 	public sidenavHidden = false;
 
