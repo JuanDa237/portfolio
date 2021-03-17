@@ -1,8 +1,9 @@
 import express, { Application } from 'express';
-import morgan from 'morgan';
 import cors from 'cors';
-import dotenv from 'dotenv';
+import morgan from 'morgan';
 
+// Needed .env - PORT, EMAIL, PASS
+import dotenv from 'dotenv';
 import keys from './keys';
 
 // Routes
