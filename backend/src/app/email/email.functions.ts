@@ -7,10 +7,13 @@ import Mail from 'nodemailer/lib/mailer';
 import SMTPTransport from 'nodemailer/lib/smtp-transport';
 import { EmailInfo, StatusEmail } from './models/emails.model';
 
+// Schemas
+import EmailModel from './models/emails.model';
+
 class EmailFunctions {
 	public async sendMails(emailInfo: EmailInfo): Promise<StatusEmail[]> {
 		var sentEmails: StatusEmail[] = [];
-		const myEmail = process.env.EMAIL || keys.noEnv.EMAIL;
+		const myEmail = process.env.EMAIL || keys.email.EMAIL;
 
 		const sendedToMe = await this.sendEmailPromise(this.infoToMe(myEmail, emailInfo));
 		sentEmails.push({
@@ -26,6 +29,8 @@ class EmailFunctions {
 		if (sendedToMe) {
 			const sendedToUser = await this.sendEmailPromise(this.infoToUser(myEmail, emailInfo));
 			sentEmails[1].sent = sendedToUser;
+		} else {
+			await this.saveInMongo(emailInfo);
 		}
 
 		return sentEmails;
@@ -73,8 +78,8 @@ class EmailFunctions {
 				secure: true,
 				auth: {
 					type: 'login',
-					user: process.env.EMAIL || keys.noEnv.EMAIL,
-					pass: process.env.PASS || keys.noEnv.PASS
+					user: process.env.EMAIL || keys.email.EMAIL,
+					pass: process.env.PASS || keys.email.PASS
 				}
 			};
 
@@ -106,6 +111,19 @@ class EmailFunctions {
 				}
 			});
 		});
+	}
+
+	// Save In Mongo
+	private async saveInMongo(emailInfo: EmailInfo): Promise<void> {
+		const newEmail = new EmailModel({
+			name: emailInfo.name,
+			email: emailInfo.email,
+			subject: emailInfo.subject,
+			message: emailInfo.message,
+			origin: emailInfo.origin
+		});
+
+		await newEmail.save();
 	}
 }
 

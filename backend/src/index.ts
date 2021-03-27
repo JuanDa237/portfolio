@@ -2,13 +2,16 @@ import express, { Application } from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 
-// Needed .env - PORT, EMAIL, PASS
+// Needed .env
 import dotenv from 'dotenv';
 import keys from './keys';
 
 // Routes
 import indexRoutes from './app/index/index.routes';
 import emailRoutes from './app/email/email.routes';
+
+//Funcions
+import { startConnection } from './database';
 
 class Server {
 	public app: Application;
@@ -22,12 +25,14 @@ class Server {
 		this.configExpress();
 		this.othersConfings();
 
+		this.initialConfig();
+
 		// Config routes
 		this.routes();
 	}
 
 	private configExpress(): void {
-		this.app.set('port', process.env.PORT || keys.noEnv.PORT);
+		this.app.set('port', process.env.PORT || keys.PORT);
 		this.app.use(express.json());
 		this.app.use(express.urlencoded({ extended: false }));
 	}
@@ -38,6 +43,10 @@ class Server {
 
 		// Morgan to see peticions in console
 		this.app.use(morgan('dev'));
+	}
+
+	private initialConfig(): void {
+		startConnection();
 	}
 
 	private routes(): void {

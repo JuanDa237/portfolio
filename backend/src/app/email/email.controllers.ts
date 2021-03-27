@@ -8,7 +8,8 @@ import { EmailInfo } from './models/emails.model';
 class EmailControllers {
 	// Send Email
 	public async sendEmail(request: Request, response: Response) {
-		const emailInfo: EmailInfo = request.body;
+		var emailInfo: EmailInfo = request.body;
+		emailInfo.origin = request.header('Origin') || 'Not_Given';
 
 		const sentEmails = await emailFunctions.sendMails(emailInfo);
 		var message: string = '';
