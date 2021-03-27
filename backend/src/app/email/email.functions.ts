@@ -44,11 +44,7 @@ class EmailFunctions {
 			},
 			to: [myEmail],
 			subject: `${emailInfo.name}: ${emailInfo.subject}`,
-			text: `
-			Nombre: ${emailInfo.name}
-			Email: ${emailInfo.email}
-			${emailInfo.message}
-			`
+			html: this.htmlToMe(emailInfo)
 		};
 
 		return mailOptions;
@@ -62,8 +58,7 @@ class EmailFunctions {
 			},
 			to: [emailInfo.email],
 			subject: 'Hola, Pronto te contactare.',
-			text: `Gracias por contactar conmigo pronto te contactare.
-			No responder a este correo.`
+			html: this.htmlToUser(emailInfo)
 		};
 
 		return mailOptions;
@@ -124,6 +119,58 @@ class EmailFunctions {
 		});
 
 		await newEmail.save();
+	}
+
+	// Emails html
+	private htmlToMe(emailInfo: EmailInfo): string {
+		return `
+		<html lang="en">
+			<head>
+				<meta charset="UTF-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<title>New Email From Contact Me</title>
+				<style>
+					* {
+						font-family: Arial, Helvetica, sans-serif;
+					}
+
+					#origin {
+						color: rgba(44, 44, 44, 0.698);
+						display: block;
+					}
+				</style>
+			</head>
+			<body>
+				<p>
+					From: ${emailInfo.name} - ${emailInfo.email}
+					<span id="origin">${emailInfo.origin}</span>
+				</p>
+				<h2>${emailInfo.subject}</h2>
+				<p>${emailInfo.message}</p>
+			</body>
+		</html>
+		`;
+	}
+
+	private htmlToUser(emailInfo: EmailInfo): string {
+		return `
+		<html lang="en">
+			<head>
+				<meta charset="UTF-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<title>Thanks For Contact Me</title>
+				<style>
+					* {
+						font-family: Arial, Helvetica, sans-serif;
+					}
+				</style>
+			</head>
+			<body>
+				<h2>Thanks For Contact Me</h2>
+				<p>I'll answer you in less than 24 hours.</p>
+			</body>
+		</html>
+		`;
 	}
 }
 
