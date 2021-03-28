@@ -7,6 +7,7 @@ import dotenv from 'dotenv';
 import keys from './keys';
 
 // Routes
+import indexRoutes from './app/index/index.routes';
 import emailRoutes from './app/email/email.routes';
 
 //Funcions
@@ -62,6 +63,7 @@ class Server {
 		this.app.use('/', express.static('public'));
 
 		// Api
+		this.app.use('/api', indexRoutes);
 		this.app.use('/api', emailRoutes);
 	}
 

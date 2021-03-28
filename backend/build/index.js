@@ -10,6 +10,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const keys_1 = __importDefault(require("./keys"));
 // Routes
+const index_routes_1 = __importDefault(require("./app/index/index.routes"));
 const email_routes_1 = __importDefault(require("./app/email/email.routes"));
 //Funcions
 const database_1 = require("./database");
@@ -48,6 +49,7 @@ class Server {
         // Client
         this.app.use('/', express_1.default.static('public'));
         // Api
+        this.app.use('/api', index_routes_1.default);
         this.app.use('/api', email_routes_1.default);
     }
     start() {
