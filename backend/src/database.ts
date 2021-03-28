@@ -3,7 +3,7 @@ import { connect } from 'mongoose';
 export async function startConnection(): Promise<any> {
 	var url: string;
 
-	if (process.env.PROD) {
+	if (process.env.PROD == 'true') {
 		url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_U_PASS}@contact-me.dcrjc.mongodb.net/${process.env.DB}?retryWrites=true&w=majority`;
 	} else {
 		url = `mongodb://${process.env.DB_HOST}/${process.env.DB}`;
