@@ -75,6 +75,22 @@
 			"p": "Estoy desarrollando una web con el stack MEAN. El sitio web consta de un apartado para administrar el contenido de un diccionario de neologismos."
 		}
 	},
+	"work": {
+		"h": "mi trabajo",
+		"t": "mi trabajo mas reciente",
+		"projects": {
+			"1": {
+				"t": "caja registradora",
+				"c": "sitio web",
+				"p": "Esta es una aplicaicion web para administrar negocios de comidas rapidas..."
+			},
+			"2": {
+				"t": "diccionario de neologismos",
+				"c": "sitio web",
+				"p": "Estoy desarrollando esta pagina web para el semillero de investigacion TAI..."
+			}
+		}
+	},
 	"contact": {
 		"h": "estemos en contacto",
 		"t": "contacto",

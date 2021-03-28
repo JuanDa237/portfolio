@@ -1,1 +1,55 @@
-<app-section heading="my work" title="recent work" id="work"></app-section>
+<app-section [heading]="'work.h' | translate" [title]="'work.t' | translate" id="work">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="project project-1">
+				<div class="desc">
+					<h3>
+						<a href="https://github.com/JuanDa237/Cash_Register" target="_blank">
+							{{ 'work.projects.1.t' | translate }}
+						</a>
+					</h3>
+					<span>{{ 'work.projects.1.c' | translate }}</span>
+					<p>
+						{{ 'work.projects.1.p' | translate }}
+					</p>
+					<div class="info">
+						<a
+							class="btn btn-light"
+							href="https://github.com/JuanDa237/Cash_Register"
+							target="_blank"
+						>
+							<i class="fab fa-github"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="project project-2">
+				<div class="desc">
+					<h3>
+						<a
+							href="https://github.com/JuanDa237/Dictionary_of_neologisms"
+							target="_blank"
+						>
+							{{ 'work.projects.2.t' | translate }}
+						</a>
+					</h3>
+					<span>{{ 'work.projects.2.c' | translate }}</span>
+					<p>
+						{{ 'work.projects.2.p' | translate }}
+					</p>
+					<div class="info">
+						<a
+							class="btn btn-light"
+							href="https://github.com/JuanDa237/Dictionary_of_neologisms"
+							target="_blank"
+						>
+							<i class="fab fa-github"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</app-section>

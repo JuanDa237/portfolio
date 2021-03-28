@@ -1,0 +1,110 @@
+@import 'styles/variables.scss';
+
+.project {
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: block;
+	position: relative;
+	height: 300px;
+	width: 100%;
+	margin-bottom: 2rem;
+	.desc {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: $primary;
+		padding: 20px;
+		opacity: 0;
+		transition: 0.3s;
+		h3 {
+			font-family: 'Quicksand', Arial, sans-serif;
+			font-size: 16px;
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			margin-bottom: 0.5rem;
+			transition: transform 0.3s, opacity 0.3s;
+			transform: translate3d(0, -15px, 0);
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+		span {
+			display: block;
+			color: rgba(255, 255, 255, 0.7);
+			font-size: 13px;
+			text-transform: capitalize;
+			margin-bottom: 1rem;
+			transition: transform 0.3s, opacity 0.3s;
+			transform: translate3d(0, -15px, 0);
+			a {
+				color: black;
+			}
+		}
+		p {
+			color: white;
+			transition: transform 0.3s, opacity 0.3s;
+			transform: translate3d(15px, 0, 0);
+		}
+		.info {
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			right: 20px;
+			transition: transform 0.3s, opacity 0.3s;
+			transform: translate3d(15px, 0, 0);
+			a {
+				font-size: 20px;
+			}
+		}
+	}
+	&:hover {
+		.desc {
+			opacity: 1;
+			h3 {
+				transform: translate3d(0, 0, 0);
+			}
+			span {
+				transform: translate3d(0, 0, 0);
+			}
+			p {
+				transform: translate3d(0, 0, 0);
+			}
+			.info {
+				transform: translate3d(0, 0, 0);
+			}
+		}
+	}
+	&.project-1 {
+		background-image: url('/assets/images/projects/1.png');
+	}
+	&.project-2 {
+		background-image: url('/assets/images/projects/2.png');
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.project {
+		.desc {
+			opacity: 1;
+			background: rgba(0, 0, 0, 0.4);
+			h3 {
+				font-style: 28px;
+				transform: translate3d(0, 0, 0);
+			}
+			span {
+				transform: translate3d(0, 0, 0);
+			}
+			p {
+				transform: translate3d(0, 0, 0);
+			}
+			.info {
+				transform: translate3d(0, 0, 0);
+			}
+		}
+	}
+}

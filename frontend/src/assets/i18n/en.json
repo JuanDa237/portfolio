@@ -75,6 +75,22 @@
 			"p": "I am developing a website with the MEAN stack. The website consist of a section to manage the content of a dictionary of neologisms."
 		}
 	},
+	"work": {
+		"h": "my work",
+		"t": "mi recent work",
+		"projects": {
+			"1": {
+				"t": "cash register",
+				"c": "web site",
+				"p": "This is a web application to manage fast food businesses..."
+			},
+			"2": {
+				"t": "dictionary of neologisms",
+				"c": "web site",
+				"p": "I am developing this website for the TAI research hotbed ..."
+			}
+		}
+	},
 	"contact": {
 		"h": "get in touch",
 		"t": "contact",
