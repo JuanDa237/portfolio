@@ -32,6 +32,9 @@ $size-box: 100px;
 		padding-left: $size-box + 15px;
 		text-align: left;
 		word-wrap: break-word;
+		a {
+			text-decoration: none;
+		}
 	}
 }
 

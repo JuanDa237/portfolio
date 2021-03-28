@@ -7,7 +7,7 @@
 		transition: transform 0.15s ease-in-out;
 		z-index: $zindex-sidenav;
 		width: $sidenav-base-width;
-		height: 100vh;
+		height: 100%;
 		// By default the sidenav will be moved off-canvas
 		transform: translateX(-$sidenav-base-width);
 	}

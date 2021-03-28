@@ -10,7 +10,7 @@ $link: #bdbdbd;
 	background-color: $neutral;
 	.btn-float {
 		position: fixed;
-		transform: translateX($sidenav-base-width + 20px);
+		transform: translateX($sidenav-base-width + 5px);
 		top: 5px;
 		margin: 0;
 		padding: 0;
