@@ -6,9 +6,11 @@
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
-		"start": "node build/",
+		"start": "node dist/index.js",
 		"start:dev": "nodemon build/",
-		"build:dev": "tsc -w"
+		"build:dev": "tsc -w",
+		"build:prod": "tsc && mv ./build ./dist && cd ../frontend && npm run build:prod",
+		"deploy": "git add ./dist && git add ./public && git commit -m \"Deploy\""
 	},
 	"dependencies": {
 		"cors": "^2.8.5",

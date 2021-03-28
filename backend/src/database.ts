@@ -1,10 +1,9 @@
 import { connect } from 'mongoose';
 
 export async function startConnection(): Promise<any> {
-	const prod: boolean = true;
 	var url: string;
 
-	if (prod) {
+	if (process.env.PROD) {
 		url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_U_PASS}@contact-me.dcrjc.mongodb.net/${process.env.DB}?retryWrites=true&w=majority`;
 	} else {
 		url = `mongodb://${process.env.DB_HOST}/${process.env.DB}`;
