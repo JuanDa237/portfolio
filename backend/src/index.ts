@@ -7,7 +7,6 @@ import dotenv from 'dotenv';
 import keys from './keys';
 
 // Routes
-import indexRoutes from './app/index/index.routes';
 import emailRoutes from './app/email/email.routes';
 
 //Funcions
@@ -41,8 +40,17 @@ class Server {
 		// Cors policy configuration
 		this.app.use(cors());
 
-		// Morgan to see peticions in console
-		this.app.use(morgan('dev'));
+		// See peticions in console
+		this.app.use(
+			morgan(
+				'tiny', // dev - tiny
+				{
+					skip: function (req, res) {
+						return res.statusCode < 400;
+					}
+				}
+			)
+		);
 	}
 
 	private initialConfig(): void {
@@ -50,7 +58,10 @@ class Server {
 	}
 
 	private routes(): void {
-		this.app.use('/', indexRoutes);
+		// Client
+		this.app.use('/', express.static('public'));
+
+		// Api
 		this.app.use('/api', emailRoutes);
 	}
 

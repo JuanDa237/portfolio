@@ -6,7 +6,8 @@
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
-		"start": "nodemon build/",
+		"start": "node build/",
+		"start:dev": "nodemon build/",
 		"build": "tsc -w"
 	},
 	"dependencies": {

@@ -1,14 +1,24 @@
 import { connect } from 'mongoose';
-import keys from './keys';
 
 export async function startConnection(): Promise<any> {
-	await connect(
-		`mongodb://${process.env.DB_HOST || keys.DB.DB_HOST}/${process.env.DB || keys.DB.DB}`,
-		{
+	const prod: boolean = true;
+	var url: string;
+
+	if (prod) {
+		url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_U_PASS}@contact-me.dcrjc.mongodb.net/${process.env.DB}?retryWrites=true&w=majority`;
+	} else {
+		url = `mongodb://${process.env.DB_HOST}/${process.env.DB}`;
+	}
+
+	try {
+		await connect(url, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 			useFindAndModify: false
-		}
-	);
-	console.log('DB is connected.');
+		});
+
+		console.log('DB is connected.');
+	} catch (error) {
+		console.log("DB isn't connected.");
+	}
 }
