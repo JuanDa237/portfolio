@@ -8,7 +8,7 @@
 	"scripts": {
 		"start": "node build/",
 		"start:dev": "nodemon build/",
-		"build": "tsc -w"
+		"build:dev": "tsc -w"
 	},
 	"dependencies": {
 		"cors": "^2.8.5",

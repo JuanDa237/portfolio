@@ -3,7 +3,6 @@
 /backend/node_modules
 
 # Builds
-/backend/build
 /frontend/build
 
 # Backend uploads
