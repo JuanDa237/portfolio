@@ -4,12 +4,13 @@
 	#layoutSidenav_nav {
 		flex-basis: $sidenav-base-width;
 		flex-shrink: 0;
-		transition: transform 0.15s ease-in-out;
-		z-index: $zindex-sidenav;
 		width: $sidenav-base-width;
-		height: 100vh;
+		height: 100%;
+		z-index: $zindex-sidenav;
+		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 17%);
 		// By default the sidenav will be moved off-canvas
 		transform: translateX(-$sidenav-base-width);
+		transition: transform 0.15s ease-in-out;
 	}
 	// Wraps the content when using the sidenav layout
 	#layoutSidenav_content {
