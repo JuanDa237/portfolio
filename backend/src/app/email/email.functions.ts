@@ -87,6 +87,7 @@ class EmailFunctions {
 					if (error) {
 						resolve(false);
 					} else {
+						console.log('Error in send');
 						resolve(true);
 					}
 				});
@@ -100,6 +101,7 @@ class EmailFunctions {
 		return new Promise((resolve) => {
 			transporter.verify((error) => {
 				if (error) {
+					console.log('Error in verify');
 					resolve(false);
 				} else {
 					resolve(true);
