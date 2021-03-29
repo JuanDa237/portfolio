@@ -17,13 +17,13 @@
 	"about": {
 		"h": "about me",
 		"t": "who am i?",
-		"p1": "I'm a patient, kind person and I like team work. At the moment I'm looking for a job as a web page developer, I'm currently studying Systems Engineering at the Metropolitan Technological Institute of Medellin (ITM).",
-		"p2": "In addition, I'm a perfectionist with a taste for constant updating and continuous learning, I love to investigate and learn on my own.",
+		"p1": "I'm currently a Systems Engineering student at the Metropolitan Technological Institute (ITM), I'm also very self-taught, with a taste for continuous learning and my goal is to be a great professional in the development of web applications so I want to start in the world of work. I've knowledge of frontend as well as backend and I have several projects where I use different technologies. I'm responsible, a kind person and I like teamwork.",
+		"p2": "I really appreciate good communication with people, so I constantly learn English which allows me to communicate with foreing people, in addition my self-taught learning style allows me to improve and learn new things every day. I'm very interested in getting a job as a web developer either in a company or as a freelance worker, I've different skills and aptitudes so I invite you to know more about me and do not hesitate to contact me if you have any questions.",
 		"abilities": {
 			"1": "Frontend",
 			"2": "Backend",
-			"3": "Software",
-			"4": "Desktop apps"
+			"3": "Databases",
+			"4": "Software"
 		}
 	},
 	"skills": {
@@ -31,23 +31,24 @@
 		"t": "my skills",
 		"a": {
 			"t": "angular",
-			"p": "I love developing web pages with the angular framework, it's very agile and versatile. I've the ability to create responsive web designs and I usually use scss for the styles."
+			"p": "Angular is my quintessential frontend framework, it's very agile and versatile. I've different capabilities regarding it, in addition to coupling it with responsive web design, Scss and some framework such as Bootstrap or Material design regarding styles."
 		},
 		"n": {
 			"t": "node js",
-			"p": "I love creating the server of my applications with Node, I also use it in conjunction with Express, Multer, JWT, among others. To be able to create more complex applications such as file uploading and authentication."
+			"p": "Node allows me to create the server of my web pages quickly, I usually create my applications with TypeScript, JWT, Multer, among others, which allow me to develop complex things such as authentication or file management."
 		},
 		"e": {
 			"t": "express",
-			"p": "The Express framework helps me create my backend easily and quickly, I like to develop my Express backend using TypeScript, but I also have the ability to do it with JavaScript."
+			"p": "The Express framework helps me to create my server easily and quickly together Node, it provides me with the necessary tools for my applications, I usually develop these applications with TypeScript or, failing that, with JavaScript."
 		},
 		"db": {
 			"t": "database",
-			"p": "For my applications I usually use MySql or MongoDB, I've the ability to use them in conjunction with Node and Express to make the data last over time."
+			"p": "I've the ability to manage Sql as well as NoSql databases, I usually use MySql or MongoDB respectively together Node and Express for the development of my applications where it's necessary to make the information last over time."
 		},
-		"p": "The aforementioned technologies are my main tools to develop web pages and I have several projects where I use them, In addition I use the following technologies to carry out my projects:",
+		"p": "The technologies mentioned above are my main tools for web development and I've several projects where I use them, I also have an interest in learning new technologies such as React, GraphQL, Go or any related to the world of software development. To carry out my projects I also made a lot of use of the following tools, which I've the ability to use for development.",
 		"tec": {
-			"e": "Electron / Desktop development."
+			"r": "Responsive web design",
+			"e": "Electron / Desktop development"
 		}
 	},
 	"education": {
@@ -56,11 +57,11 @@
 		"ed": {
 			"1": {
 				"t": "systems engineer student",
-				"p": "Currently I'm studying Software Development and eventually Systems Engineering at the Metropolitan Institute of Medellin (ITM), I'm part of a research seedbed named TAI where I develop a web page."
+				"p": "I'm currently studying Software Development and eventually Systems Engineering at the ITM in which I'm part of a research seedbed on Supportive Technologies for Inclusion (TAI) where I'm the main developer of a web page together with the team."
 			},
 			"2": {
 				"t": "high school",
-				"p": "The school where I graduated is called Centro Educativo Autonomo (CEA), I was in my last grade in 2019 and finally graduated."
+				"p": "The school where I graduated is called Centro Educativo Autónomo (CEA), I was in my last grade in 2019 and finally graduated."
 			}
 		}
 	},
@@ -69,10 +70,10 @@
 		"t": "work experience",
 		"1": {
 			"t": {
-				"work": "Fullstack Developer at ITM",
+				"work": "Fullstack Developer at TAI",
 				"time": "2020 - Actually"
 			},
-			"p": "I am developing a website with the MEAN stack. The website consist of a section to manage the content of a dictionary of neologisms."
+			"p": "I'm developing a website called Dictionary of Neologisms with the MEAN stack. The website consists of a section to manage the content of a dictionary of neologisms that will be available for the consumption of ITM students and other universities in the metropolitan area."
 		}
 	},
 	"work": {
@@ -82,12 +83,12 @@
 			"1": {
 				"t": "cash register",
 				"c": "web site",
-				"p": "This is a web application to manage fast food businesses..."
+				"p": "This is my main project which consists of a web page to manage restaurants, it allows to have an inventory, view diagrams and reports, among other functionalities. If you want to know more about the project, I invite you to see the repository on GitHub or contact me if you want to access the page."
 			},
 			"2": {
 				"t": "dictionary of neologisms",
 				"c": "web site",
-				"p": "I am developing this website for the TAI research hotbed ..."
+				"p": "The Dictionary of Neologisms is the web page that I'm developing with the TAI research seedbed. I invite you to know more about him in the GitHub repository."
 			}
 		}
 	},
