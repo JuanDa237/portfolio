@@ -17,13 +17,13 @@
 	"about": {
 		"h": "acerca de mi",
 		"t": "¿quien soy?",
-		"p1": "Soy una persona paciente, amable y me gusta trabajar en equipo. En el momento me encuentro en busqueda de un empleo como desarrollador de paginas web, estudio actualmente Ingenieria de Sistemas en el Instituto Tecnologico Metropolitano De Medellin (ITM).",
-		"p2": "A demas soy perfeccionista con gusto por la actualización constante y el aprendizaje continuo, me encanta investigar y aprender por mi cuenta.",
+		"p1": "Actualmente soy estudiante de Ingeniería de Sistemas en el Instituto Tecnológico Metropolitano (ITM), además soy muy autodidacta, con gusto por el aprendizaje continuo y mi meta es ser un gran profesional en el desarrollo de aplicaciones web por lo que quiero iniciar en el mundo laboral. Poseo conocimientos tanto en frontend como en backend y tengo varios proyectos donde utilizo diferentes tecnologías. Soy una persona responsable, amable y me gusta trabajar en equipo.",
+		"p2": "Aprecio mucho una buena comunicación con las personas por lo que aprendo ingles constantemente lo cual me permite la comunicación con personas del extranjero además mi estilo de aprendizaje autodidacta me permite cada día mejorar y aprender nuevas cosas. Me interesa mucho obtener un trabajo como desarrollador web ya sea en una empresa o como trabajador autónomo, tengo distintas habilidades y aptitudes así que te invito a conocer más de mí y no dudes en contactarme si tienes alguna pregunta.",
 		"abilities": {
-			"1": "Frontend",
-			"2": "Backend",
-			"3": "Software",
-			"4": "Aplicaciones de escritorio"
+			"1": "Frontend (Cliente)",
+			"2": "Backend (Servidor)",
+			"3": "Bases de datos",
+			"4": "Software (Programa Informatico)"
 		}
 	},
 	"skills": {
@@ -31,36 +31,37 @@
 		"t": "mis habilidades",
 		"a": {
 			"t": "angular",
-			"p": "Me encanta desarrollar paginas web con el framework angular, es muy agil y verstalil. Tengo la capacidad de crear responsive web desings y usualmente uso scss para los estilos."
+			"p": "Angular es mi framework frontend por excelencia, es muy ágil y versátil. Tengo diferentes capacidades referentes a el, además lo acoplo con el diseño web responsivo, Scss y algún framework como Bootstrap o Material design referente a los estilos."
 		},
 		"n": {
 			"t": "node js",
-			"p": "Amo crear el servidor de mis aplicaciones con Node, ademas lo uso en conjunto con Express, Multer, JWT, entre otras. Para poder crear aplicaciones mas complejas como con subida de archivos y autenticaion."
+			"p": "Node me permite crear el servidor de mis páginas web ágilmente, suelo crear mis aplicaciones con TypeScript, JWT, Multer, entre otros, los cuales me permiten desarrollar cosas complejas como autenticación o administración de archivos."
 		},
 		"e": {
 			"t": "express",
-			"p": "El framework Express me ayuda a crear mi backend de forma sencilla y rapida, me gusta desarrollar mi backend Express usando TypeScript, pero tambien tengo la capcidad de hacerlo con JavaScript."
+			"p": "El framework Express me ayuda a crear mi servidor de forma sencilla y rápida en conjunto con Node, este me proporciona las herramientas necesarias para mis aplicaciones, usualmente desarrollo estas aplicaciones con TypeScript o en su defecto con JavaScript."
 		},
 		"db": {
 			"t": "bases de datos",
-			"p": "Para mis aplicaiones suelo usar tanto MySql como MongoDB, tengo la capacidad de usarlos en conjunto con Node y Express para hacer que los datos perduren en el tiempo."
+			"p": "Tengo la capacidad de gestionar bases de datos tanto Sql como NoSql, suelo usar MySql o MongoDB respectivamente en conjunto con Node y Express para el desarrollo de mis aplicaciones donde es necesario hacer que la información perdure en el tiempo."
 		},
-		"p": "Las tecnologias anteriormente mencionadas son mis herramientas principales para desarollar web y tengo varios proyectos donde las uso, a demas tambien para realizar mis proyectos uso las siguientes tecnologias:",
+		"p": "Las tecnologías anteriormente mencionadas son mis herramientas principales para el desarrollo web y tengo varios proyectos donde las uso, también tengo interés en aprender nuevas tecnologías tales como React, GraphQL, Go o cualquiera relacionada con el mundo del desarrollo de software. Para llevar a cabo mis proyectos también hice mucho uso de las siguientes herramientas, las cuales tengo la capacidad de usarlas para el desarrollo.",
 		"tec": {
-			"e": "Electron / Aplicaciones de escritorio."
+			"r": "Diseño web responsivo",
+			"e": "Electron / Aplicaciones de escritorio"
 		}
 	},
 	"education": {
-		"h": "educacion",
-		"t": "educacion",
+		"h": "educación",
+		"t": "educación",
 		"ed": {
 			"1": {
-				"t": "estudiante de ingenieria de sistemas",
-				"p": "Actualmente estoy estudiando Desarollo de Software y eventualmente Ingenieria de Sistemas en el Instituto Metropolitano De Medellin (ITM), hago parte de un semillero de investiagion nombrado TAI donde desarrollo una pagina web."
+				"t": "estudiante de ingeniería de sistemas",
+				"p": "Actualmente estoy estudiando Desarrollo de Software y eventualmente Ingeniería de Sistemas en el ITM en el cual hago parte de un semillero de investigación acerca de Tecnologías de Apoyo a la Inclusión (TAI) donde soy el principal desarrollador una página web en conjunto con el equipo."
 			},
 			"2": {
 				"t": "bachiller",
-				"p": "El colegio donde me gradue se llama Centro Educativo Autonomo (CEA), curse el ultimo grado en 2019 y finalmente me gradue."
+				"p": "El colegio donde me gradúe se llama Centro Educativo Autónomo (CEA), curse el ultimo grado en 2019 y finalmente me gradúe."
 			}
 		}
 	},
@@ -69,25 +70,25 @@
 		"t": "experiencia laboral",
 		"1": {
 			"t": {
-				"work": "Desarrollador Fullstack en el ITM",
+				"work": "Desarrollador Fullstack en TAI",
 				"time": "2020 - Actualmente"
 			},
-			"p": "Estoy desarrollando una web con el stack MEAN. El sitio web consta de un apartado para administrar el contenido de un diccionario de neologismos."
+			"p": "Estoy desarrollando una web llamada Diccionario de Neologismos con el stack MEAN. El sitio web consta de un apartado para administrar el contenido de un diccionario de neologismos que estará disponible para el consumo de los estudiantes del ITM y más universidades del área metropolitana."
 		}
 	},
 	"work": {
 		"h": "mi trabajo",
-		"t": "mi trabajo mas reciente",
+		"t": "mi trabajo más reciente",
 		"projects": {
 			"1": {
 				"t": "caja registradora",
 				"c": "sitio web",
-				"p": "Esta es una aplicaicion web para administrar negocios de comidas rapidas..."
+				"p": "Este es mi proyecto principal el cual consta de un página web para administrar restaurantes, permite tener un inventario, ver diagramas e informes, entre otras funcionalidades. Si quieres saber más del proyecto te invito a ver el repositorio en GitHub o contacta conmigo en caso de querer acceder a la página."
 			},
 			"2": {
 				"t": "diccionario de neologismos",
 				"c": "sitio web",
-				"p": "Estoy desarrollando esta pagina web para el semillero de investigacion TAI..."
+				"p": "El Diccionario de Neologismos es la página web que estoy desarrollando con el semillero de investigación TAI. Te invito a conocer más acerca de el en el repositorio de GitHub."
 			}
 		}
 	},
