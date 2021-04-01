@@ -1,110 +1,45 @@
 @import 'styles/variables.scss';
 
-.project {
-	background-size: contain;
-	background-position: center center;
-	background-repeat: no-repeat;
-	display: block;
-	position: relative;
-	height: 300px;
-	width: 100%;
-	margin-bottom: 2rem;
-	.desc {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: $primary;
-		padding: 20px;
-		opacity: 0;
-		transition: 0.3s;
-		h3 {
-			font-family: 'Quicksand', Arial, sans-serif;
-			font-size: 16px;
-			font-weight: 500;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			margin-bottom: 0.5rem;
-			transition: transform 0.3s, opacity 0.3s;
-			transform: translate3d(0, -15px, 0);
-			a {
-				color: white;
-				text-decoration: none;
-			}
-		}
-		span {
-			display: block;
-			color: rgba(255, 255, 255, 0.7);
-			font-size: 13px;
-			text-transform: capitalize;
-			margin-bottom: 1rem;
-			transition: transform 0.3s, opacity 0.3s;
-			transform: translate3d(0, -15px, 0);
-			a {
-				color: black;
-			}
-		}
-		p {
-			color: white;
-			transition: transform 0.3s, opacity 0.3s;
-			transform: translate3d(15px, 0, 0);
-		}
-		.info {
-			position: absolute;
-			bottom: 20px;
-			left: 20px;
-			right: 20px;
-			transition: transform 0.3s, opacity 0.3s;
-			transform: translate3d(15px, 0, 0);
-			a {
-				font-size: 20px;
-			}
-		}
-	}
+.card {
+	margin-bottom: 1.5rem;
+	cursor: pointer;
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+	transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow;
 	&:hover {
-		.desc {
-			opacity: 1;
-			h3 {
-				transform: translate3d(0, 0, 0);
-			}
-			span {
-				transform: translate3d(0, 0, 0);
-			}
-			p {
-				transform: translate3d(0, 0, 0);
-			}
-			.info {
-				transform: translate3d(0, 0, 0);
-			}
-		}
-	}
-	&.project-1 {
-		background-image: url('/assets/images/projects/1.png');
-	}
-	&.project-2 {
-		background-image: url('/assets/images/projects/2.png');
+		transform: scale(1.05);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 	}
 }
 
-@include media-breakpoint-down(lg) {
-	.project {
-		.desc {
-			opacity: 1;
-			background: rgba(0, 0, 0, 0.4);
-			h3 {
-				font-style: 28px;
-				transform: translate3d(0, 0, 0);
-			}
-			span {
-				transform: translate3d(0, 0, 0);
-			}
-			p {
-				transform: translate3d(0, 0, 0);
-			}
-			.info {
-				transform: translate3d(0, 0, 0);
-			}
-		}
+.card-title {
+	a {
+		display: block;
+		color: black;
+		font-weight: 500;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+	span {
+		font-size: 14px;
+		text-transform: capitalize;
+	}
+}
+
+.card-text {
+	margin-bottom: 3rem;
+}
+
+.links {
+	display: block;
+	position: absolute;
+	bottom: 10px;
+}
+
+@include media-breakpoint-up(md) {
+	.card {
+		margin: auto;
+		height: 100%;
+		width: 90%;
+		margin: 0;
 	}
 }
