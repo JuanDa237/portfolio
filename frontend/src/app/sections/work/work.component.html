@@ -1,18 +1,23 @@
 <app-section [heading]="'work.h' | translate" [title]="'work.t' | translate" id="work">
 	<div class="row">
 		<div class="col-md-6">
-			<div class="project project-1">
-				<div class="desc">
-					<h3>
+			<div class="card">
+				<img
+					class="card-img-top"
+					src="/assets/images/projects/1.png"
+					[alt]="'work.projects.1.t' | translate"
+				/>
+				<div class="card-body">
+					<h5 class="card-title">
 						<a href="https://github.com/JuanDa237/Cash_Register" target="_blank">
 							{{ 'work.projects.1.t' | translate }}
 						</a>
-					</h3>
-					<span>{{ 'work.projects.1.c' | translate }}</span>
-					<p>
+						<span class="text-muted">{{ 'work.projects.1.c' | translate }}</span>
+					</h5>
+					<p class="card-text">
 						{{ 'work.projects.1.p' | translate }}
 					</p>
-					<div class="info">
+					<div class="links">
 						<a
 							class="btn btn-light"
 							href="https://github.com/JuanDa237/Cash_Register"
@@ -25,21 +30,26 @@
 			</div>
 		</div>
 		<div class="col-md-6">
-			<div class="project project-2">
-				<div class="desc">
-					<h3>
+			<div class="card">
+				<img
+					class="card-img-top"
+					src="/assets/images/projects/2.png"
+					[alt]="'work.projects.2.t' | translate"
+				/>
+				<div class="card-body">
+					<h5 class="card-title">
 						<a
 							href="https://github.com/JuanDa237/Dictionary_of_neologisms"
 							target="_blank"
 						>
 							{{ 'work.projects.2.t' | translate }}
 						</a>
-					</h3>
-					<span>{{ 'work.projects.2.c' | translate }}</span>
-					<p>
+						<span class="text-muted">{{ 'work.projects.2.c' | translate }}</span>
+					</h5>
+					<p class="card-text">
 						{{ 'work.projects.2.p' | translate }}
 					</p>
-					<div class="info">
+					<div class="links">
 						<a
 							class="btn btn-light"
 							href="https://github.com/JuanDa237/Dictionary_of_neologisms"
