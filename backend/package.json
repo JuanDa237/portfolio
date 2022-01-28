@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"scripts": {
 		"start": "node dist/index.js",
-		"build": "tsc",
+		"build": "npm install --only=dev && tsc",
 		"start:dev": "ts-node-dev src/index.ts"
 	},
 	"dependencies": {
@@ -12,8 +12,7 @@
 		"express": "^4.17.1",
 		"mongoose": "^5.12.2",
 		"morgan": "^1.10.0",
-		"nodemailer": "^6.5.0",
-		"typescript": "^4.5.5"
+		"nodemailer": "^6.5.0"
 	},
 	"devDependencies": {
 		"@types/cors": "^2.8.10",
@@ -23,6 +22,7 @@
 		"@types/morgan": "^1.9.2",
 		"@types/node": "^17.0.13",
 		"@types/nodemailer": "^6.4.1",
-		"ts-node-dev": "^1.1.8"
+		"ts-node-dev": "^1.1.8",
+		"typescript": "^4.5.5"
 	}
 }
