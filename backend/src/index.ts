@@ -18,6 +18,7 @@ class Server {
 
 	constructor() {
 		// Enviroment variables
+		// .env should be in backend folder
 		dotenv.config();
 
 		// Express

@@ -7,6 +7,7 @@
 
 # Private Files
 toDoList
+/backend/.env
 
 # Compiled output
 /frontend/dist
@@ -14,9 +15,6 @@ toDoList
 /frontend/out-tsc
 /backend/dist
 /backend/public
-
-# Enviroment Variables
-/backend/.env
 
 # Angualar Generated
 

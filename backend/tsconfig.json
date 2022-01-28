@@ -2,13 +2,20 @@
 	"compilerOptions": {
 		"target": "es6",
 		"module": "commonjs",
-		"outDir": "./build",
+		"rootDir": "./src",
+		"outDir": "./dist",
 		"strict": true,
 		"esModuleInterop": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true
 	},
-	"include": ["src"],
-	"exclude": ["node_modules"],
-	"files": ["types/index.d.ts"]
+	"include": [
+		"src"
+	],
+	"exclude": [
+		"node_modules"
+	],
+	"files": [
+		"types/index.d.ts"
+	]
 }

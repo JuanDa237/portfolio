@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"scripts": {
 		"start:dev": "ng serve --port 4000",
-		"build:prod": "ng build --prod"
+		"build": "ng build --prod"
 	},
 	"private": true,
 	"dependencies": {
