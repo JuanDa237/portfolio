@@ -1,0 +1,22 @@
+{
+	"name": "my-portfolio",
+	"version": "1.0.0",
+	"description": "A backend for send emails from Contact Me form.",
+	"author": "Juan David Gaviria Correa",
+	"main": "index.js",
+	"scripts": {
+		"build": "npm run build:back && npm run build:front",
+		"build:back": "cd backend && npm i && npm build && cd ..",
+		"build:front": "cd frontend && npm i && npm run build:prod && cd ..",
+		"start": "cd backend && npm start"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JuanDa237/portfolio.git"
+	},
+	"bugs": {
+		"url": "https://github.com/JuanDa237/portfolio/issues"
+	},
+	"homepage": "https://github.com/JuanDa237/portfolio#readme",
+	"private": true
+}
