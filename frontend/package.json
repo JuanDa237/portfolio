@@ -2,7 +2,8 @@
 	"name": "portfolio",
 	"version": "0.0.0",
 	"scripts": {
-		"build": "ng build",
+		"build": "prod-install && ng build",
+		"prod-install": "npm i && npm i --only=dev",
 		"start:dev": "ng serve --port 4000"
 	},
 	"private": true,

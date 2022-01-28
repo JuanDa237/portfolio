@@ -6,8 +6,8 @@
 	"main": "index.js",
 	"scripts": {
 		"build": "npm run build:back && npm run build:front",
-		"build:back": "cd backend && npm i && npm run build",
-		"build:front": "cd frontend && npm i && npm run build",
+		"build:back": "cd backend && npm run build",
+		"build:front": "cd frontend && npm run build",
 		"start": "cd backend && npm start"
 	},
 	"repository": {
