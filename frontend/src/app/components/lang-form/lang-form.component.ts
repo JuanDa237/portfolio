@@ -17,7 +17,9 @@ export class LangFormComponent {
 		this.translateS.addLangs(this.langs);
 		this.translateS.setDefaultLang(this.langs[0]);
 
-		const lang = localStorage.getItem('lang') || this.translateS.getBrowserLang();
+		var lang = localStorage.getItem('lang') || this.translateS.getBrowserLang();
+		if (!lang) lang = this.langs[0];
+
 		this.setLang(lang);
 	}
 

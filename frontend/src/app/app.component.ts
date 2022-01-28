@@ -1,6 +1,6 @@
 import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { NavigationService } from './services/navigation.service';
+import { Subscription } from 'rxjs';
 
 @Component({
 	selector: 'app-root',
