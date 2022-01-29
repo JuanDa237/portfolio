@@ -48,7 +48,7 @@
 		"p": "The technologies mentioned above are my main tools for web development and I've several projects where I use them, I also have an interest in learning new technologies such as React, GraphQL, Go or any related to the world of software development. To carry out my projects I also made a lot of use of the following tools, which I've the ability to use for development.",
 		"tec": {
 			"r": "Responsive web design",
-			"e": "Electron / Desktop development"
+			"a": "API integration"
 		}
 	},
 	"education": {
@@ -60,6 +60,10 @@
 				"p": "I'm currently studying Software Development and eventually Systems Engineering at the ITM in which I'm part of a research seedbed on Supportive Technologies for Inclusion (TAI) where I'm the main developer of a web page together with the team."
 			},
 			"2": {
+				"t": "Web Development",
+				"p": "I studied programming skills with an emphasis on web applications (TIC Mission 2022), with an hourly intensity of 800 hours. More information about this grade at"
+			},
+			"3": {
 				"t": "high school",
 				"p": "The school where I graduated is called Centro Educativo Autónomo (CEA), I was in my last grade in 2019 and finally graduated."
 			}
@@ -70,10 +74,10 @@
 		"t": "work experience",
 		"1": {
 			"t": {
-				"work": "Fullstack Developer at TAI",
-				"time": "2020 - Actually"
+				"work": "Fullstack Developer (Javier Propiedades)",
+				"time": "Jun 2021 - 2022"
 			},
-			"p": "I'm developing a website called Dictionary of Neologisms with the MEAN stack. The website consists of a section to manage the content of a dictionary of neologisms that will be available for the consumption of ITM students and other universities in the metropolitan area."
+			"p": "I developed the backend and frontend of a web application focused on real estate sales, the owner can enter as an administrator and change the contents of the web."
 		}
 	},
 	"work": {
@@ -81,11 +85,16 @@
 		"t": "mi recent work",
 		"projects": {
 			"1": {
+				"t": "Javier Propiedades",
+				"c": "web site",
+				"p": "This website is developed with MongoDB, Express, Angular 2+, Node.js (MEAN Stack), I also use Angular SSR, Bootstrap, JWT, AWS S3, Google Maps and Places API, Matterport Virtual Tours."
+			},
+			"2": {
 				"t": "cash register",
 				"c": "web site",
 				"p": "This is my main project which consists of a web page to manage restaurants, it allows to have an inventory, view diagrams and reports, among other functionalities. If you want to know more about the project, I invite you to see the repository on GitHub or contact me if you want to access the page."
 			},
-			"2": {
+			"3": {
 				"t": "dictionary of neologisms",
 				"c": "web site",
 				"p": "The Dictionary of Neologisms is the web page that I'm developing with the TAI research seedbed. I invite you to know more about him in the GitHub repository."

@@ -48,7 +48,7 @@
 		"p": "Las tecnologías anteriormente mencionadas son mis herramientas principales para el desarrollo web y tengo varios proyectos donde las uso, también tengo interés en aprender nuevas tecnologías tales como React, GraphQL, Go o cualquiera relacionada con el mundo del desarrollo de software. Para llevar a cabo mis proyectos también hice mucho uso de las siguientes herramientas, las cuales tengo la capacidad de usarlas para el desarrollo.",
 		"tec": {
 			"r": "Diseño web responsivo",
-			"e": "Electron / Aplicaciones de escritorio"
+			"a": "Integracion de API's"
 		}
 	},
 	"education": {
@@ -60,6 +60,10 @@
 				"p": "Actualmente estoy estudiando Desarrollo de Software y eventualmente Ingeniería de Sistemas en el ITM en el cual hago parte de un semillero de investigación acerca de Tecnologías de Apoyo a la Inclusión (TAI) donde soy el principal desarrollador una página web en conjunto con el equipo."
 			},
 			"2": {
+				"t": "Desarrollo Web",
+				"p": "Estudie habilidades en programación con énfasis en aplicaciones web (Misión TIC 2022), con una intensidad horaria de 800 horas. Mas informacion acerca de esto en"
+			},
+			"3": {
 				"t": "bachiller",
 				"p": "El colegio donde me gradúe se llama Centro Educativo Autónomo (CEA), curse el ultimo grado en 2019 y finalmente me gradúe."
 			}
@@ -70,10 +74,10 @@
 		"t": "experiencia laboral",
 		"1": {
 			"t": {
-				"work": "Desarrollador Fullstack en TAI",
-				"time": "2020 - Actualmente"
+				"work": "Desarrollador Fullstack (Javier Propiedades)",
+				"time": "Jun 2021 - 2022"
 			},
-			"p": "Estoy desarrollando una web llamada Diccionario de Neologismos con el stack MEAN. El sitio web consta de un apartado para administrar el contenido de un diccionario de neologismos que estará disponible para el consumo de los estudiantes del ITM y más universidades del área metropolitana."
+			"p": "Desarrollé el backend y frontend de una aplicación web enfocada a la venta de inmuebles, el propietario puede ingresar como administrador y cambiar los contenidos de la web."
 		}
 	},
 	"work": {
@@ -81,11 +85,16 @@
 		"t": "mi trabajo más reciente",
 		"projects": {
 			"1": {
+				"t": "Javier Propiedades",
+				"c": "sitio web",
+				"p": "Esta web esta desarrollada con MongoDB, Express, Angular 2+, Node.js (MEAN Stack), tambien hago uso de Angular SSR, Bootstrap, JWT, AWS S3, Google Maps and Places API, Matterport Virtual Tours."
+			},
+			"2": {
 				"t": "caja registradora",
 				"c": "sitio web",
 				"p": "Este es mi proyecto principal el cual consta de un página web para administrar restaurantes, permite tener un inventario, ver diagramas e informes, entre otras funcionalidades. Si quieres saber más del proyecto te invito a ver el repositorio en GitHub o contacta conmigo en caso de querer acceder a la página."
 			},
-			"2": {
+			"3": {
 				"t": "diccionario de neologismos",
 				"c": "sitio web",
 				"p": "El Diccionario de Neologismos es la página web que estoy desarrollando con el semillero de investigación TAI. Te invito a conocer más acerca de el en el repositorio de GitHub."
