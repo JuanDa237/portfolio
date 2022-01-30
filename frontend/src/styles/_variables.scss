@@ -1,11 +1,10 @@
-// Overwrite bootstrap variables
+// Overwrite Bootstrap variables
 @import './variables/overwrite';
 
-// Import Bootstrap tools
+// Bootstrap tools
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
 
-// Import navigation variables
-@import './variables/sidenav';
+// My varibles
 @import './variables/colors';
