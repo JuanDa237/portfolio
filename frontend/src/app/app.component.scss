@@ -110,6 +110,10 @@
 }
 
 @include media-breakpoint-up(sm) {
+	#home {
+		min-height: 950px;
+	}
+
 	#main-text {
 		top: 25%;
 		left: 25%;
@@ -148,7 +152,17 @@
 	}
 }
 
+@include media-breakpoint-up(md) {
+	#home {
+		min-height: 1100px;
+	}
+}
+
 @include media-breakpoint-up(lg) {
+	#home {
+		min-height: 1300px;
+	}
+
 	#main-text {
 		top: 28%;
 		left: 25%;
@@ -188,6 +202,10 @@
 }
 
 @include media-breakpoint-up(xl) {
+	#home {
+		min-height: unset;
+	}
+
 	#main-text {
 		top: 28%;
 		left: 16%;
