@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { interval, take } from 'rxjs';
 
 @Component({
@@ -9,7 +11,7 @@ import { interval, take } from 'rxjs';
 export class NavbarComponent implements OnInit {
 	public glassbg: boolean;
 
-	constructor() {
+	constructor(private translate: TranslateService) {
 		this.glassbg = false;
 	}
 
@@ -48,6 +50,22 @@ export class NavbarComponent implements OnInit {
 			});
 		} else {
 			this.glassbg = !this.glassbg;
+		}
+	}
+
+	public goToResume() {
+		let lang = this.translate.currentLang;
+		let path = window.location.href;
+
+		switch (lang) {
+			case 'en':
+				path += 'assets/resumes/Juan-Gaviria-Resume.pdf';
+				window.open(path, '_blank');
+				break;
+			case 'es':
+			default:
+				path += 'assets/resumes/Juan-Gaviria-Curriculo.pdf';
+				window.open(path, '_blank');
 		}
 	}
 }

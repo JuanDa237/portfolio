@@ -28,9 +28,9 @@
 					<a class="nav-link" href="#about-me">{{ 'navbar.about' | translate }}</a>
 				</li>
 				<li class="nav-item m-1">
-					<a class="nav-link btn btn-outline p-2" href="#">{{
-						'navbar.resume' | translate
-					}}</a>
+					<button class="nav-link btn btn-outline p-2" (click)="goToResume()">
+						{{ 'navbar.resume' | translate }}
+					</button>
 				</li>
 				<li class="nav-item m-1">
 					<app-lang-form></app-lang-form>
