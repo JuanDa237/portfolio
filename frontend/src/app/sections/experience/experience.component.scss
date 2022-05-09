@@ -1,0 +1,41 @@
+@import 'styles/variables.scss';
+
+#experience {
+	width: 100%;
+	height: 100vh;
+	scroll-snap-align: start;
+	background-color: $blue-1;
+	overflow: hidden;
+	min-height: 750px;
+}
+
+#title {
+	display: inline-block;
+	margin: 0;
+	font-size: 4.5rem;
+	font-weight: 800;
+	color: $white;
+	text-align: center;
+	position: relative;
+	&::before {
+		content: '';
+		display: block;
+		background-color: $blue-3;
+		width: 50%;
+		height: 6px;
+		border-radius: 5px;
+		position: absolute;
+		bottom: 6px;
+	}
+	&::after {
+		content: '';
+		display: block;
+		background-color: $blue-3;
+		width: 50%;
+		height: 6px;
+		border-radius: 5px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+}
