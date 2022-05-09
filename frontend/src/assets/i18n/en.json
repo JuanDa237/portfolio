@@ -7,5 +7,9 @@
 		"home": "Home",
 		"about": "About me",
 		"resume": "Resume"
+	},
+	"home": {
+		"hello": "Hello\nI'm\nJuan",
+		"dev": "Full Stack Web Developer"
 	}
 }

@@ -7,5 +7,9 @@
 		"home": "Inicio",
 		"about": "Acerca de mi",
 		"resume": "Currículo"
+	},
+	"home": {
+		"hello": "Hola\nSoy\nJuan",
+		"dev": "Desarrollador Web Full Stack"
 	}
 }

@@ -35,6 +35,15 @@
 		line-height: 1;
 		margin: 0;
 		padding: 0.5rem;
+		&:after {
+			content: '';
+			display: inline-block;
+			background-color: black;
+			margin-left: 2px;
+			height: 18vw;
+			width: 6px;
+			animation: cursor 1.5s infinite;
+		}
 	}
 	h2 {
 		position: fixed;
@@ -45,6 +54,7 @@
 		font-weight: 400;
 		margin: 0;
 		padding: 0.5rem;
+		opacity: 0;
 	}
 }
 
@@ -98,6 +108,9 @@
 	#square-fix {
 		h1 {
 			font-size: 16vw;
+			&:after {
+				height: 14vw;
+			}
 		}
 		h2 {
 			font-size: 4vw;
@@ -147,6 +160,9 @@
 	#square-fix {
 		h1 {
 			font-size: 13vw;
+			&:after {
+				height: 11vw;
+			}
 		}
 		h2 {
 			font-size: 4vw;
@@ -190,6 +206,9 @@
 	#square-fix {
 		h1 {
 			font-size: 9vw;
+			&:after {
+				height: 8vw;
+			}
 		}
 		h2 {
 			font-size: 2.2vw;
@@ -229,6 +248,9 @@
 	#square-fix {
 		h1 {
 			font-size: 6.2vw;
+			&:after {
+				height: 5.2vw;
+			}
 		}
 		h2 {
 			font-size: 1.6vw;
@@ -258,20 +280,6 @@
 }
 
 // Text Typing
-#square-fix {
-	h2 {
-		opacity: 0;
-	}
-	h1:after {
-		content: '';
-		display: inline-block;
-		background-color: black;
-		margin-left: 2px;
-		height: 90px;
-		width: 6px;
-		animation: cursor 1.5s infinite;
-	}
-}
 
 .fade-in {
 	animation: fadeIn linear 1.5s;
