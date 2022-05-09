@@ -21,10 +21,9 @@ export class HomeComponent implements OnInit {
 		tag.innerHTML = '';
 		let text = "Hello\nI'm\nJuan";
 		let index = 0;
-		const timer = interval(250);
-		const lenght = timer.pipe(take(text.length));
+		const timer = interval(250).pipe(take(text.length));
 
-		lenght
+		timer
 			.subscribe((n) => {
 				if (!tag) return;
 
@@ -37,7 +36,7 @@ export class HomeComponent implements OnInit {
 				index++;
 			})
 			.add(() => {
-				window.requestAnimationFrame(function (time) {
+				window.requestAnimationFrame(() => {
 					let tag2 = document.getElementById('subtitle');
 					if (!tag2) return;
 
