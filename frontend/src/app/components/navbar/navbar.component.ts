@@ -20,12 +20,12 @@ export class NavbarComponent implements OnInit {
 	private navbarColorChange(): void {
 		let navbar = document.getElementById('main-nav');
 		let sc = document.getElementById('scroll-container');
-		let wh = window.innerHeight;
 
 		sc?.addEventListener('scroll', () => {
 			if (!navbar) return;
 			if (!sc?.scrollTop) return;
 
+			let wh = window.innerHeight;
 			let section = Math.floor(sc?.scrollTop / wh);
 
 			if (section % 2 == 0) {
