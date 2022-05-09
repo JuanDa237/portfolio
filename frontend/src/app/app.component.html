@@ -1,4 +1,5 @@
-<div class="scroll-container">
+<app-preloader *ngIf="preloading" (preloading)="preloadingEvent($event)"></app-preloader>
+<div *ngIf="!preloading" class="scroll-container">
 	<app-home></app-home>
 	<app-about-me></app-about-me>
 	<section>

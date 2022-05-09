@@ -1,0 +1,46 @@
+@import 'styles/variables.scss';
+
+#preloader {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: $blue-1;
+	z-index: 100000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#loader {
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 200px;
+		animation: fadeIn linear 1.5s;
+		animation-fill-mode: forwards;
+	}
+}
+
+.fade-out {
+	animation: fadeOut linear 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

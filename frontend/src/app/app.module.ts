@@ -9,6 +9,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppComponent } from './app.component';
 
 import { sections } from './sections';
+import { components } from './components';
 
 @NgModule({
 	imports: [
@@ -21,7 +22,7 @@ import { sections } from './sections';
 			}
 		})
 	],
-	declarations: [AppComponent, sections],
+	declarations: [AppComponent, sections, components],
 	providers: [],
 	bootstrap: [AppComponent]
 })
