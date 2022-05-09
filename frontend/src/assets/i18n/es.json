@@ -11,5 +11,11 @@
 	"home": {
 		"hello": "Hola\nSoy\nJuan",
 		"dev": "Desarrollador Web Full Stack"
+	},
+	"about": {
+		"about": "Acerca De Mi",
+		"1": "Mi interes en el desarrollo web empezo a finales de 2019 debido a que me di cuenta que podia resolver problemas en el backend y ser creativo en el frotend, me encantan las dos, empeze entonces a estudiar autodidacticamente y ahora puedo decir que estoy preparado para construir paginas web.",
+		"2": "He construido algunos proyectos personales y un par de webs, casi todas están hechas con el stack MEAN (MongoDB, Express, Angular, Node.js) porque es mi favorito, de igual manera siempre estoy abierto a probar nuevas tecnologías.",
+		"3": "Soy una persona muy autodidacta y mis hobbies son nadar, ciclismo y  video juegos."
 	}
 }

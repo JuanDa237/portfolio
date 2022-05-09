@@ -11,5 +11,11 @@
 	"home": {
 		"hello": "Hello\nI'm\nJuan",
 		"dev": "Full Stack Web Developer"
+	},
+	"about": {
+		"about": "About Me",
+		"1": "My interest in web development started at the end of 2019 because I realized that I could solve problems in the backend and be creative in the frontend, I love both of them, so I started to study on my own and now I can say that I am ready to build websites.",
+		"2": "I've built some personal projects and a couple of websites, almost all of them are made with the MEAN stack (MongoDB, Express, Angular, Node.js) because it is my favorite, in the same way I'm always open to trying new technologies.",
+		"3": "I am a very self-taught person and my hobbies are swimming, cycling and video games."
 	}
 }
