@@ -37,9 +37,12 @@
 		padding: 0.5rem;
 	}
 	h2 {
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		text-align: start;
 		font-size: 6vw;
 		font-weight: 400;
-		text-align: end;
 		margin: 0;
 		padding: 0.5rem;
 	}
@@ -251,5 +254,50 @@
 
 	#bg-2 {
 		width: 30%;
+	}
+}
+
+// Text Typing
+#square-fix {
+	h2 {
+		opacity: 0;
+	}
+	h1:after {
+		content: '';
+		display: inline-block;
+		background-color: black;
+		margin-left: 2px;
+		height: 90px;
+		width: 6px;
+		animation: cursor 1.5s infinite;
+	}
+}
+
+.fade-in {
+	animation: fadeIn linear 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes cursor {
+	0% {
+		opacity: 1;
+	}
+	49% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
