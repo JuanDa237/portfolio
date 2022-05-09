@@ -22,30 +22,18 @@
 		<div class="collapse navbar-collapse" id="main-nav-content">
 			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 				<li class="nav-item m-1">
-					<a class="nav-link" href="#home">Home</a>
+					<a class="nav-link" href="#home">{{ 'navbar.home' | translate }}</a>
 				</li>
 				<li class="nav-item m-1">
-					<a class="nav-link" href="#about-me">About Me</a>
+					<a class="nav-link" href="#about-me">{{ 'navbar.about' | translate }}</a>
 				</li>
 				<li class="nav-item m-1">
-					<a class="btn btn-outline" href="#">Resume</a>
+					<a class="nav-link btn btn-outline p-2" href="#">{{
+						'navbar.resume' | translate
+					}}</a>
 				</li>
 				<li class="nav-item m-1">
-					<div class="btn-group dropstart">
-						<button
-							type="button"
-							id="lang-menu"
-							class="btn btn-outline"
-							data-bs-toggle="dropdown"
-							aria-expanded="false"
-						>
-							Lang
-						</button>
-						<ul class="dropdown-menu" aria-labelledby="lang-menu">
-							<li><a class="dropdown-item" href="#">English</a></li>
-							<li><a class="dropdown-item" href="#">Spanish</a></li>
-						</ul>
-					</div>
+					<app-lang-form></app-lang-form>
 				</li>
 			</ul>
 		</div>

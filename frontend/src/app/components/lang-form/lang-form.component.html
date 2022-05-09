@@ -1,0 +1,20 @@
+<div class="nav-link btn-group dropstart">
+	<button
+		type="button"
+		id="lang-menu"
+		class="btn btn-outline lang"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+	>
+		<i class="fa-solid fa-language"></i>
+	</button>
+	<ul class="dropdown-menu" aria-labelledby="lang-menu">
+		<ng-container *ngFor="let lang of langs">
+			<li>
+				<button class="dropdown-item" (click)="onLangClick(lang)">
+					{{ 'langs.' + lang | translate }}
+				</button>
+			</li>
+		</ng-container>
+	</ul>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval, take } from 'rxjs';
 
 @Component({
 	selector: 'app-navbar',
@@ -39,6 +40,14 @@ export class NavbarComponent implements OnInit {
 
 	// Events
 	public toggleGlassbg() {
-		this.glassbg = !this.glassbg;
+		if (this.glassbg) {
+			const timer = interval(350).pipe(take(1));
+
+			timer.subscribe(() => {
+				this.glassbg = !this.glassbg;
+			});
+		} else {
+			this.glassbg = !this.glassbg;
+		}
 	}
 }
