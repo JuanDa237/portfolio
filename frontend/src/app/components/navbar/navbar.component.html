@@ -1,0 +1,53 @@
+<nav
+	id="main-nav"
+	class="navbar navbar-expand-lg fixed-top navbar-one"
+	[ngClass]="{ 'glass-bg': glassbg }"
+>
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#home">
+			<img src="assets/images/logo.svg" alt="Logo" />
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#main-nav-content"
+			aria-controls="main-nav-content"
+			aria-expanded="false"
+			(click)="toggleGlassbg()"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="main-nav-content">
+			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+				<li class="nav-item m-1">
+					<a class="nav-link" href="#home">Home</a>
+				</li>
+				<li class="nav-item m-1">
+					<a class="nav-link" href="#about-me">About Me</a>
+				</li>
+				<li class="nav-item m-1">
+					<a class="btn btn-outline" href="#">Resume</a>
+				</li>
+				<li class="nav-item m-1">
+					<div class="btn-group dropstart">
+						<button
+							type="button"
+							id="lang-menu"
+							class="btn btn-outline"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							Lang
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="lang-menu">
+							<li><a class="dropdown-item" href="#">English</a></li>
+							<li><a class="dropdown-item" href="#">Spanish</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
