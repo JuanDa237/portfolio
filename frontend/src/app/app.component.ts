@@ -16,6 +16,5 @@ export class AppComponent {
 
 	public preloadingEvent(event: boolean): void {
 		this.preloading = event;
-		console.log(event);
 	}
 }
