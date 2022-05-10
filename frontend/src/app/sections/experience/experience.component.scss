@@ -1,35 +1,21 @@
 @import 'styles/variables.scss';
 
-#title {
-	display: inline-block;
-	font-size: 3.5rem;
-	font-weight: 800;
+// Adjust Layout
+#experience {
+	background-color: $blue-1;
+}
+
+.title {
 	color: $white;
-	text-align: center;
-	position: relative;
-	margin: 3.5rem 0;
 	&::before {
-		content: '';
-		display: block;
-		background-color: $blue-3;
-		width: 50%;
-		height: 6px;
-		border-radius: 5px;
-		position: absolute;
 		bottom: -10px;
 	}
 	&::after {
-		content: '';
-		display: block;
-		background-color: $blue-3;
-		width: 50%;
-		height: 6px;
-		border-radius: 5px;
-		position: absolute;
 		bottom: -5px;
-		right: 0;
 	}
 }
+
+// New styles
 
 .subtitle {
 	text-align: center;
@@ -54,25 +40,5 @@
 		.card-text {
 			color: $blue-1;
 		}
-	}
-}
-
-#experience {
-	width: 100%;
-	height: fit-content;
-	scroll-snap-align: start;
-	background-color: $blue-1;
-	overflow: hidden;
-}
-
-@include media-breakpoint-up(sm) {
-	#experience {
-		min-height: 760px;
-	}
-
-	#title {
-		font-size: 4.5rem;
-		padding: 0;
-		margin: 0;
 	}
 }
