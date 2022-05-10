@@ -8,7 +8,8 @@
 		"build": "npm run build:back && npm run build:front",
 		"build:back": "cd backend && npm run build",
 		"build:front": "cd frontend && npm run build",
-		"start": "cd backend && npm start"
+		"start": "cd backend && npm start",
+		"start:dev": "cd frontend && npm run start:dev"
 	},
 	"repository": {
 		"type": "git",
