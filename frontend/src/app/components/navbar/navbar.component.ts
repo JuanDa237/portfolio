@@ -54,16 +54,16 @@ export class NavbarComponent implements OnInit {
 
 	public goToResume() {
 		let lang = this.translate.currentLang;
-		let path = window.location.href;
+		let path: string = window.location.origin;
 
 		switch (lang) {
 			case 'en':
-				path += 'assets/resumes/Juan-Gaviria-Resume.pdf';
+				path += '/assets/resumes/Juan-Gaviria-Resume.pdf';
 				window.open(path, '_blank');
 				break;
 			case 'es':
 			default:
-				path += 'assets/resumes/Juan-Gaviria-Curriculo.pdf';
+				path += '/assets/resumes/Juan-Gaviria-Curriculo.pdf';
 				window.open(path, '_blank');
 		}
 	}
