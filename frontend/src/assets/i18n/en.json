@@ -20,6 +20,25 @@
 		"3": "I am a very self-taught person and my hobbies are swimming, cycling and play videogames"
 	},
 	"experience": {
-		"title": "Experience"
+		"title": "Experience",
+		"subtitle": {
+			"1": "Work",
+			"2": "Personal Proyects"
+		},
+		"1": {
+			"title": "Javier propiedades"
+		},
+		"2": {
+			"title": "Cash register"
+		},
+		"3": {
+			"title": "Portfolio"
+		},
+		"4": {
+			"title": "Resume HTML templates"
+		},
+		"5": {
+			"title": "Dictionary of neologisms"
+		}
 	}
 }

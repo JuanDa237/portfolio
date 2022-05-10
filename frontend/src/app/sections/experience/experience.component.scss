@@ -1,22 +1,13 @@
 @import 'styles/variables.scss';
 
-#experience {
-	width: 100%;
-	height: 100vh;
-	scroll-snap-align: start;
-	background-color: $blue-1;
-	overflow: hidden;
-	min-height: 750px;
-}
-
 #title {
 	display: inline-block;
-	margin: 0;
-	font-size: 4.5rem;
+	font-size: 3.5rem;
 	font-weight: 800;
 	color: $white;
 	text-align: center;
 	position: relative;
+	margin: 3.5rem 0;
 	&::before {
 		content: '';
 		display: block;
@@ -25,7 +16,7 @@
 		height: 6px;
 		border-radius: 5px;
 		position: absolute;
-		bottom: 6px;
+		bottom: -10px;
 	}
 	&::after {
 		content: '';
@@ -35,7 +26,53 @@
 		height: 6px;
 		border-radius: 5px;
 		position: absolute;
-		bottom: 0;
+		bottom: -5px;
 		right: 0;
+	}
+}
+
+.subtitle {
+	text-align: center;
+	color: $white;
+	h3 {
+		width: 100%;
+		margin: 0;
+		font-weight: 900;
+	}
+}
+
+.card {
+	width: 18rem;
+	text-decoration: none;
+	text-align: start;
+	color: $black;
+	border: 0;
+	.card-img-top {
+		box-shadow: 0 0.1rem 1rem rgb(0 0 0 / 15%) !important;
+	}
+	.card-body {
+		.card-text {
+			color: $blue-1;
+		}
+	}
+}
+
+#experience {
+	width: 100%;
+	height: fit-content;
+	scroll-snap-align: start;
+	background-color: $blue-1;
+	overflow: hidden;
+}
+
+@include media-breakpoint-up(sm) {
+	#experience {
+		min-height: 760px;
+	}
+
+	#title {
+		font-size: 4.5rem;
+		padding: 0;
+		margin: 0;
 	}
 }

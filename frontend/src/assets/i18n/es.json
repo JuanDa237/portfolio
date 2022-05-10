@@ -20,6 +20,25 @@
 		"3": "Soy una persona muy autodidacta y mis hobbies son nadar, ciclismo y  jugar videojuegos"
 	},
 	"experience": {
-		"title": "Experiencia"
+		"title": "Experiencia",
+		"subtitle": {
+			"1": "Trabajo",
+			"2": "Proyectos Personales"
+		},
+		"1": {
+			"title": "Javier propiedades"
+		},
+		"2": {
+			"title": "Caja registradora"
+		},
+		"3": {
+			"title": "Portafolio"
+		},
+		"4": {
+			"title": "Plantillas de Curriculo HTML"
+		},
+		"5": {
+			"title": "Diccionario de neologismos"
+		}
 	}
 }
