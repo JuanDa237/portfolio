@@ -14,7 +14,7 @@
 		"dev": "Desarrollador Web Full Stack"
 	},
 	"about": {
-		"about": "Sobre mí",
+		"title": "Sobre mí",
 		"1": "Mi interes en el desarrollo web empezo a finales de 2019 debido a que me di cuenta que podia resolver problemas en el backend y ser creativo en el frotend, me encantan ambos, empeze entonces a estudiar autodidacticamente y ahora puedo decir que estoy preparado para construir paginas web",
 		"2": "He construido algunos proyectos personales y un par de webs, casi todas están hechas con el stack MEAN (MongoDB, Express, Angular, Node.js) porque es mi favorito, de igual manera siempre estoy abierto a probar nuevas tecnologías",
 		"3": "Soy una persona muy autodidacta y mis hobbies son nadar, ciclismo y  jugar videojuegos"
@@ -40,5 +40,11 @@
 		"5": {
 			"title": "Diccionario de neologismos"
 		}
+	},
+	"contact": {
+		"title": "Contacto",
+		"subtitle": "Ponte en contacto",
+		"desc": "¿Tienes una pregunta, una propuesta o solo quieres decir hola? Adelante",
+		"email": "Enviame un correo"
 	}
 }
