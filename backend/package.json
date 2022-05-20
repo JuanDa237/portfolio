@@ -3,21 +3,20 @@
 	"version": "0.0.0",
 	"scripts": {
 		"start": "node dist/index.js",
-		"build": "npm run prod-install && tsc",
-		"prod-install": "npm i && npm i --only=dev",
+		"build": "npm i && tsc",
 		"start:dev": "ts-node-dev src/index.ts"
 	},
 	"dependencies": {
 		"cors": "^2.8.5",
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
-		"typescript": "^4.5.5"
-	},
-	"devDependencies": {
+		"typescript": "^4.5.5",
 		"@types/cors": "^2.8.10",
 		"@types/dotenv": "^8.2.0",
 		"@types/express": "^4.17.11",
-		"@types/node": "^17.0.13",
+		"@types/node": "^17.0.13"
+	},
+	"devDependencies": {
 		"ts-node-dev": "^1.1.8"
 	}
 }
