@@ -63,7 +63,7 @@ export class NavbarComponent implements OnInit {
 				break;
 			case 'es':
 			default:
-				path += '/assets/resumes/Juan-Gaviria-Curriculo.pdf';
+				path += '/assets/resumes/Juan-Gaviria-Currículo.pdf';
 				window.open(path, '_blank');
 		}
 	}
