@@ -1,17 +1,9 @@
 import express, { Application } from 'express';
 import cors from 'cors';
-import morgan from 'morgan';
 
 // Needed .env
 import dotenv from 'dotenv';
 import keys from './keys';
-
-// Routes
-import indexRoutes from './app/index/index.routes';
-import emailRoutes from './app/email/email.routes';
-
-//Funcions
-import { startConnection } from './database';
 
 class Server {
 	public app: Application;
@@ -26,8 +18,6 @@ class Server {
 		this.configExpress();
 		this.othersConfings();
 
-		this.initialConfig();
-
 		// Config routes
 		this.routes();
 	}
@@ -41,31 +31,11 @@ class Server {
 	private othersConfings(): void {
 		// Cors policy configuration
 		this.app.use(cors());
-
-		// See peticions in console
-		this.app.use(
-			morgan(
-				'tiny', // dev - tiny
-				{
-					skip: function (req, res) {
-						return res.statusCode < 400;
-					}
-				}
-			)
-		);
-	}
-
-	private initialConfig(): void {
-		startConnection();
 	}
 
 	private routes(): void {
 		// Client
 		this.app.use('/', express.static('public'));
-
-		// Api
-		this.app.use('/api', indexRoutes);
-		this.app.use('/api', emailRoutes);
 	}
 
 	public start(): void {

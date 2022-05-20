@@ -3,9 +3,6 @@
 /backend/node_modules
 /node_modules
 
-# Backend uploads
-/backend/uploads/*
-
 # Private Files
 toDoList
 /backend/.env
@@ -17,7 +14,7 @@ toDoList
 /backend/dist
 /backend/public
 
-# Angualar Generated
+# Angular Generated
 
 # Only exists if Bazel was run
 /bazel-out
